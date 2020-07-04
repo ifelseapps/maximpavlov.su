@@ -1,0 +1,10 @@
+.menu__link_highlighted {
+  color: var(--primary-a-700);
+}
+
+@media screen and (min-width: 1024px) {
+  .menu__link_highlighted {
+    background: var(--primary-a-700);
+    color: #fff;
+  }
+}

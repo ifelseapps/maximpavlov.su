@@ -1,0 +1,12 @@
+.menu__link {
+  display: block;
+  padding: 0.5em;
+  color: inherit;
+  text-decoration: none;
+  border-radius: inherit;
+}
+
+.menu__link:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.1em var(--primary-400);
+}

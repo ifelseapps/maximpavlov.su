@@ -1,11 +1,23 @@
+import { classnames } from '@bem-react/classnames';
+import { IClassNameProps } from '@bem-react/core';
 import React from 'react';
+import { cn } from '../../classname';
 import { useConfig } from '../../context/config';
+import { Logo } from '../logo';
+import { Menu } from '../menu/menu';
+import './header.css';
+import { HeaderMenu } from './__menu/header__menu';
 
-export const Header: React.FC = () => {
+export const cnHeader = cn('header');
+
+export const Header: React.FC<IClassNameProps> = ({ className }) => {
   const config = useConfig();
   return (
-    <header>
-      {config.layout.title} - {config.layout.description}
+    <header className={classnames(cnHeader(), className)}>
+      <Logo name={config.layout.title} position={config.layout.description} className={cnHeader('logo')} />
+      <HeaderMenu>
+        <Menu items={config.layout.menu} />
+      </HeaderMenu>
     </header>
   );
 };

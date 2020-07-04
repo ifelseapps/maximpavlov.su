@@ -5,7 +5,7 @@ import { FromYaml } from '../contracts/utils';
 
 export const configContext = React.createContext<IConfig>({} as IConfig);
 
-const { Provider } = configContext;
+const { Provider, Consumer } = configContext;
 
 export const ConfigProvider: FC = ({ children }) => {
   const { dataYaml } = useStaticQuery<FromYaml<IConfig>>(graphql`
@@ -14,6 +14,11 @@ export const ConfigProvider: FC = ({ children }) => {
         layout {
           title
           description
+          menu {
+            name
+            path
+            highlighted
+          }
         }
       }
     }
@@ -21,5 +26,5 @@ export const ConfigProvider: FC = ({ children }) => {
 
   return <Provider value={dataYaml}>{children}</Provider>;
 };
-
 export const useConfig = (): IConfig => React.useContext(configContext);
+export const ConfigConsumer = Consumer;

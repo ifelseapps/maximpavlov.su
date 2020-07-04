@@ -1,6 +1,6 @@
 html {
   font-family: 'Fira Sans', Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: calc(15px + 0.25vw);
   height: 100%;
 }
 
@@ -10,7 +10,17 @@ body {
   height: 100%;
 }
 
-.page {
+.layout {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  grid-gap: 1rem;
   min-height: 100vh;
   background: var(--background-color);
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 1023px) {
+  .layout {
+    padding: 0 1rem;
+  }
 }

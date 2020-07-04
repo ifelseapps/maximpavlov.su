@@ -1,0 +1,9 @@
+.header__menu {
+  margin-top: 0.5em;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__menu {
+    margin-left: 3em;
+  }
+}
