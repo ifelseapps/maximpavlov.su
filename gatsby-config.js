@@ -1,12 +1,14 @@
 module.exports = {
-  // siteMetadata: {
-  //   title: `Maxim Pavlov`,
-  //   description: `Senior UI engineer`,
-  // },
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-yaml',
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve('./src/components/layout/index.ts'),
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
