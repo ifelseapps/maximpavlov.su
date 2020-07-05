@@ -1,5 +1,6 @@
 import { classnames } from '@bem-react/classnames';
 import { IClassNameProps } from '@bem-react/core';
+import { Link } from 'gatsby';
 import React from 'react';
 import { cn } from '../../classname';
 import './logo.css';
@@ -13,8 +14,8 @@ export interface ILogoProps extends IClassNameProps {
   position: string;
 }
 export const Logo: React.FC<ILogoProps> = ({ name, position, className }) => (
-  <div className={classnames(cnLogo(), className)}>
+  <Link className={classnames(cnLogo(), className)} to='/'>
     <LogoName>{name}</LogoName>
     <LogoPosition>{position}</LogoPosition>
-  </div>
+  </Link>
 );

@@ -6,6 +6,7 @@ export interface IConfig {
       name: string;
       path: string;
       highlighted?: boolean;
+      pushed?: boolean;
     }>;
   };
 }

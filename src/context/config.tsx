@@ -18,6 +18,7 @@ export const ConfigProvider: FC = ({ children }) => {
             name
             path
             highlighted
+            pushed
           }
         }
       }
