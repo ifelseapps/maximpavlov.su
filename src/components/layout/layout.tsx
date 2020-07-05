@@ -7,15 +7,23 @@ import './layout.css';
 import { ConfigConsumer, ConfigProvider } from '../../context/config';
 import { IConfig } from '../../contracts/config';
 import { Header } from '../header';
-import { Menu } from '../menu/menu';
+import { Menu, MenuItem } from '../menu';
 import { LayoutFooter } from './__footer';
 
 export const cnLayout = cn('layout');
 
-const renderMenu = (config: IConfig) => <Menu items={config.layout.menu} />;
+const renderMenu = (config: IConfig) => (
+  <Menu>
+    {config.layout.menu.map((item) => (
+      <MenuItem key={item.path} href={item.path}>
+        {item.name}
+      </MenuItem>
+    ))}
+  </Menu>
+);
 
 export const Layout: React.FC = ({ children }) => {
-  const year = new Date().getFullYear();
+  const year = React.useMemo(() => new Date().getFullYear(), []);
   return (
     <ConfigProvider>
       <div className={cnLayout()}>

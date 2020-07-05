@@ -5,7 +5,11 @@ import './menu__item.css';
 import { getClassName } from '../utils';
 import { withMenuItemHighlighted } from './_highlighted/menu__item_highlighted';
 
-const MenuItemBase: React.FC<IClassNameProps> = ({ className, children }) => (
+export interface IMenuItemBaseProps extends IClassNameProps {
+  href: string;
+}
+
+const MenuItemBase: React.FC<IMenuItemBaseProps> = ({ className, children }) => (
   <li className={classnames(getClassName('item'), className)}>{children}</li>
 );
 

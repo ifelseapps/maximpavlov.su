@@ -4,8 +4,8 @@ import React from 'react';
 import { cn } from '../../classname';
 import { useConfig } from '../../context/config';
 import { Logo } from '../logo';
-import { Menu } from '../menu/menu';
 import './header.css';
+import { Menu, MenuItem } from '../menu';
 import { HeaderMenu } from './__menu/header__menu';
 
 export const cnHeader = cn('header');
@@ -16,7 +16,13 @@ export const Header: React.FC<IClassNameProps> = ({ className }) => {
     <header className={classnames(cnHeader(), className)}>
       <Logo name={config.layout.title} position={config.layout.description} className={cnHeader('logo')} />
       <HeaderMenu>
-        <Menu items={config.layout.menu} />
+        <Menu>
+          {config.layout.menu.map((item) => (
+            <MenuItem key={item.path} href={item.path} highlighted={item.highlighted}>
+              {item.name}
+            </MenuItem>
+          ))}
+        </Menu>
       </HeaderMenu>
     </header>
   );
