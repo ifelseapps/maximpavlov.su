@@ -7,7 +7,7 @@
   ],
   "plugins": [
     "@typescript-eslint",
-    "prettier",
+//    "prettier",
     "@bem-react"
   ],
   "parserOptions": {

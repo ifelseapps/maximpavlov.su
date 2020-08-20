@@ -33,7 +33,7 @@ export const Layout: React.FC = ({ children }) => {
         <Header className={cnLayout('header')} />
         <main>{children}</main>
         <LayoutFooter className={cnLayout('footer')}>
-          &copy;&nbsp;2018 - {year}&nbsp;<strong>Max Pavlov</strong>. All right reserved
+          &copy;&nbsp;2018 &mdash; {year}&nbsp;<strong>Max Pavlov</strong>. All right reserved
           <ConfigConsumer>{renderMenu}</ConfigConsumer>
         </LayoutFooter>
       </div>

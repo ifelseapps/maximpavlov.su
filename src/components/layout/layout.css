@@ -19,6 +19,10 @@ body {
   color: var(--text-color);
 }
 
+.layout__header {
+  padding-top: 1rem;
+}
+
 @media screen and (max-width: 1023px) {
   .layout {
     padding: 0 1rem;
