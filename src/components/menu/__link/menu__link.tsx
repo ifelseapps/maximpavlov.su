@@ -1,5 +1,6 @@
 import { classnames } from '@bem-react/classnames';
 import { compose, composeU, IClassNameProps } from '@bem-react/core';
+import { Link } from 'gatsby';
 import React from 'react';
 import './menu__link.css';
 import { cn } from '../../../classname';
@@ -13,7 +14,7 @@ export interface IMenuLinkProps extends IClassNameProps {
 export const cnLink = getClassName('link');
 
 export const MenuLink: React.FC<IMenuLinkProps> = ({ className, children, href }) => (
-  <a className={classnames(cnLink, className)} href={href}>
+  <Link className={classnames(cnLink, className)} to={href}>
     {children}
-  </a>
+  </Link>
 );
