@@ -4,7 +4,7 @@ const IndexPage: React.FC = () => {
   return (
     <div>
       <p>
-        I'm a senior frontend engineer from cold, snowy Russia with <strong>more than 5,5 years of experience</strong>.
+        I'm a senior frontend engineer from cold, snowy Russia with <strong>more than 5 years of experience</strong>.
       </p>
       <p>
         I create modern, resilient, user-friendly interfaces for web applications. I also develop design-systems and architecture for

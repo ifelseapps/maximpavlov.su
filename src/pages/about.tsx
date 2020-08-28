@@ -33,7 +33,7 @@ const AboutPage: React.FC = () => {
         interfaces is closer to me.
       </p>
       <p>
-        High quality is a main priority in my work. I like engineering solutions and hate it when people write code thoughtlessly. I enjoy
+        High quality is a main priority in my work. I prefer engineering solutions and hate it when people write code thoughtlessly. I enjoy
         writing clean code and designing application architecture. I also like reading the other developers' code. It broadens my ranges.
         Read more about my approach to work on the <Link to='/hire-me'>Hire me</Link> page.
       </p>
