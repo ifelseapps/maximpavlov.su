@@ -2,6 +2,7 @@ html {
   font-family: 'Fira Sans', Arial, sans-serif;
   font-size: calc(15px + 0.25vw);
   height: 100%;
+  box-sizing: border-box;
 }
 
 body {
@@ -20,11 +21,29 @@ body {
 }
 
 .layout__header {
-  padding-top: 1rem;
+  padding: 1rem;
 }
 
-@media screen and (max-width: 1023px) {
-  .layout {
-    padding: 0 1rem;
+.layout__main {
+  max-width: 1400px;
+}
+
+@media screen and (max-width: 767px) {
+  .layout__main {
+    padding: 1rem;
   }
+}
+
+@media screen and (min-width: 768px ) {
+  .layout__header {
+    padding: 1rem 3rem;
+  }
+}
+
+.layout__bottom-menu {
+  justify-content: center;
+}
+
+.layout__copyright {
+  margin-top: 0.5em;
 }

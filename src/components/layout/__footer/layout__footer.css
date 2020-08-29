@@ -1,14 +1,23 @@
 .layout__footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100px;
   padding: 1rem 0;
   background: var(--dark-900);
   color: var(--light);
+  text-align: center;
   overflow: hidden;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   .layout__footer {
-    margin: 0 -1rem;
     padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .layout__footer {
+    padding: 2rem 3rem;
   }
 }

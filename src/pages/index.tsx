@@ -1,8 +1,9 @@
 import React from 'react';
+import { useConfig } from '../context/config';
 
 const IndexPage: React.FC = () => {
   return (
-    <div>
+    <div className='content__flow'>
       <p>
         I'm a senior frontend engineer from cold, snowy Russia with <strong>more than 5 years of experience</strong>.
       </p>

@@ -3,28 +3,25 @@ import { IClassNameProps } from '@bem-react/core';
 import React from 'react';
 import { cn } from '../../classname';
 import { useConfig } from '../../context/config';
-import { Container } from '../container';
 import { Logo } from '../logo';
 import './header.css';
 import { Menu, MenuItem } from '../menu';
 import { HeaderMenu } from './__menu/header__menu';
+import { MenuConfig } from '../../contracts/config';
 
 export const cnHeader = cn('header');
 
-export const Header: React.FC<IClassNameProps> = ({ className }) => {
+interface IHeaderProps extends IClassNameProps {
+  renderMenu: (menu: MenuConfig) => React.ReactNode;
+}
+
+export const Header: React.FC<IHeaderProps> = ({ renderMenu, className }) => {
   const config = useConfig();
+
   return (
-    <Container as='header' className={classnames(cnHeader(), className)}>
+    <header className={classnames(cnHeader(), className)}>
       <Logo name={config.layout.title} position={config.layout.description} className={cnHeader('logo')} />
-      <HeaderMenu>
-        <Menu>
-          {config.layout.menu.map((item) => (
-            <MenuItem key={item.path} href={item.path} highlighted={item.highlighted} pushed={item.pushed}>
-              {item.name}
-            </MenuItem>
-          ))}
-        </Menu>
-      </HeaderMenu>
-    </Container>
+      <HeaderMenu>{renderMenu(config.layout.menu)}</HeaderMenu>
+    </header>
   );
 };

@@ -3,7 +3,7 @@ import React from 'react';
 
 const AboutPage: React.FC = () => {
   return (
-    <>
+    <div className='content__flow'>
       <h1>A little bit about me</h1>
       <p>
         Hi! My name is Max (Max being short for <i>Maksim</i>)
@@ -53,7 +53,7 @@ const AboutPage: React.FC = () => {
           2019. It was my dream.
         </li>
       </ul>
-    </>
+    </div>
   );
 };
 

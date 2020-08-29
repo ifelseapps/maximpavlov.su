@@ -2,7 +2,7 @@
   color: var(--primary-a-700);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .menu__link_highlighted {
     background: var(--primary-a-700);
     color: #fff;
