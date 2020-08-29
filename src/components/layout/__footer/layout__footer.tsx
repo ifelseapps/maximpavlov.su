@@ -5,5 +5,7 @@ import { cnLayout } from '../layout';
 import './layout__footer.css';
 
 export const LayoutFooter: React.FC<IClassNameProps> = ({ className, children }) => (
-  <footer className={classnames(cnLayout('footer'), className)}>{children}</footer>
+  <footer className={classnames(cnLayout('footer'), className)}>
+    <div>{children}</div>
+  </footer>
 );
