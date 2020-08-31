@@ -1,25 +1,9 @@
 import React from 'react';
-import { graphql, Link, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import { Link } from 'gatsby';
 
 import './index.css';
 
 const IndexPage: React.FC = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "index_photo.jpg" }) {
-        photo: childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
-            aspectRatio
-            src
-            srcSet
-            base64
-          }
-        }
-      }
-    }
-  `);
-
   return (
     <>
       <p className='content__element content__element_important'>

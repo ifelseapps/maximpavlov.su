@@ -1,0 +1,28 @@
+.title {
+  margin: 0.2em 0;
+  padding: 0;
+  line-height: 1em;
+}
+
+.title:first-child {
+  margin-top: 0;
+}
+
+.title:last-child {
+  margin-bottom: 0;
+}
+
+.title_level_1 {
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.title_level_2 {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.title_level_3 {
+  font-weight: 600;
+  font-size: 1.3rem;
+}

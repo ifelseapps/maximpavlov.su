@@ -8,4 +8,5 @@
 
 .logo:focus {
   outline: solid 2px var(--primary-400);
+  outline-offset: 8px;
 }

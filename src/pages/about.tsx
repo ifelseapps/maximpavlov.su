@@ -1,10 +1,13 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import { Title } from '../components/title';
 
 const AboutPage: React.FC = () => {
   return (
     <>
-      <h1 className='content__element'>A little bit about me</h1>
+      <Title level={1} className='content__element'>
+        A little bit about me
+      </Title>
       <p className='content__element'>
         Hi! My name is Max (Max being short for <i>Maksim</i>)
       </p>
@@ -40,26 +43,26 @@ const AboutPage: React.FC = () => {
       <p className='content__element'>
         I'm a mentor and help junior developers adapt to this profession. I also help evolve to more experienced developers.
       </p>
-      <div className='content__element'>
-        <p>
-          I was a mentor at the programming by JavaScript championship in 2017. Besides, I taught a course on web design for school
-          children.
-        </p>
-      </div>
+      <p className='content__element content__element_remark'>
+        I was a mentor at the programming by JavaScript championship in 2017. Besides, I&nbsp;taught a course on web design for school
+        children.
+      </p>
       <p className='content__element'>
         I spend my free time with my beloved family. I'm married, and I have a daughter, she is my little princess.
       </p>
 
-      <h2 className='content__element'>A few random facts about me</h2>
-      <ul className='content__element'>
-        <li>I was born in utmost North (Arkhangelsk)</li>
-        <li>I know a little Hebrew and will continue to study it in the future</li>
-        <li>I have Jewish roots and study Jewish history, history of modern state of Israel, Judaism</li>
-        <li>
-          I'm interested in civil aviation and a lot of reading and watching about that. I flew on full flight simulator Boeing 737 NG in
-          2019. It was my dream.
-        </li>
-      </ul>
+      <div className='content__element'>
+        <Title level={2}>A few random facts about me</Title>
+        <ul>
+          <li>I was born in utmost North (Arkhangelsk)</li>
+          <li>I know a little Hebrew and will continue to study it in the future</li>
+          <li>I have Jewish roots and study Jewish history, history of modern state of Israel, Judaism</li>
+          <li>
+            I'm interested in civil aviation and a lot of reading and watching about that. I flew on full flight simulator Boeing 737 NG
+            in&nbsp;2019. It was my dream.
+          </li>
+        </ul>
+      </div>
     </>
   );
 };

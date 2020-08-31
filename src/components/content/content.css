@@ -6,9 +6,37 @@
   margin-bottom: 0;
 }
 
+.content ul {
+  margin: 1em 0 0;
+}
+
+.content li:not(:last-child) {
+  margin-bottom: 0.6em;
+}
+
+.content a {
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.content a:hover {
+  color: var(--primary-a-700);
+}
+
+.content a:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.1em var(--primary-400);
+}
+
 @media screen and (max-width: 767px) {
   .content__element {
     margin: 0.8em 0;
+  }
+
+  .content__element_remark {
+    font-size: 0.9em;
+    padding: 0 1em;
   }
 }
 
@@ -32,5 +60,11 @@
   .content__element_important {
     grid-column: 2 / 10;
     font-size: 2rem;
+  }
+
+  .content__element_remark {
+    padding: 0.1em 0 0.1em 0.5em;
+    border-left: solid 2px var(--primary-a-700);
+    grid-column: 3 / 10;
   }
 }
