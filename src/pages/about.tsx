@@ -20,7 +20,7 @@ const AboutPage: React.FC = () => {
         I have a degree in Economics from <i>Moscow Business Academy under the Government of Moscow</i>, but every things I know of web
         development I have studied on my own.
       </p>
-      <p className='content__element'>I have experience in industrial web development for about 5,5 years.</p>
+      <p className='content__element'>I have experience in industrial web development for about 5 years.</p>
       <div className='content__element'>
         <p>
           However, my real experience is still more. I started creating websites in 2002. It was the time where existed Internet Explorer 6
