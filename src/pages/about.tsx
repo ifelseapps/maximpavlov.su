@@ -41,7 +41,10 @@ const AboutPage: React.FC = () => {
         I'm a mentor and help junior developers adapt to this profession. I also help evolve to more experienced developers.
       </p>
       <div className='content__element'>
-        <p>I was a mentor at the programming by JavaScript championship in 2017.</p>
+        <p>
+          I was a mentor at the programming by JavaScript championship in 2017. Besides, I taught a course on web design for school
+          children.
+        </p>
       </div>
       <p className='content__element'>
         I spend my free time with my beloved family. I'm married, and I have a daughter, she is my little princess.
