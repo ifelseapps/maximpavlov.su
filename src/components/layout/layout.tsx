@@ -23,10 +23,10 @@ const getTopMenuRenderer = (path: string) => (menu: MenuConfig) => (
   </Menu>
 );
 
-const renderBottomMenu = (config: IConfig) => (
+const getBottomMenuRenderer = (path: string) => (config: IConfig) => (
   <Menu className={cnLayout('bottom-menu')}>
     {config.layout.menu.map((item) => (
-      <MenuItem key={item.path} href={item.path}>
+      <MenuItem key={item.path} href={item.path} selected={item.path === path}>
         {item.name}
       </MenuItem>
     ))}
@@ -40,6 +40,7 @@ interface ILayoutProps {
 export const Layout: React.FC<ILayoutProps> = ({ path, children }) => {
   const year = React.useMemo(() => new Date().getFullYear(), []);
   const renderTopMenu = React.useCallback(getTopMenuRenderer(path), [path]);
+  const renderBottomMenu = React.useCallback(getBottomMenuRenderer(path), [path]);
   return (
     <ConfigProvider>
       <div className={cnLayout()}>

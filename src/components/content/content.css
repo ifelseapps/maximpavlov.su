@@ -1,11 +1,36 @@
+.content p:first-of-type {
+  margin-top: 0;
+}
+
+.content p:last-of-type {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .content__element {
+    margin: 0.8em 0;
+  }
+}
+
 @media screen and (min-width: 768px) {
+  .content p {
+    margin: 0;
+  }
+
   .content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 1.5rem;
+    grid-auto-rows: min-content;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
   }
 
-  .content__flow {
+  .content__element {
     grid-column: 2 / 12;
+  }
+
+  .content__element_important {
+    grid-column: 2 / 10;
+    font-size: 2rem;
   }
 }
