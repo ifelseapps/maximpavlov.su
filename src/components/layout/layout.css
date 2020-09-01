@@ -27,6 +27,7 @@ body {
 
 .layout__main {
   max-width: 1400px;
+  will-change: transform;
 }
 
 @media screen and (max-width: 767px) {
