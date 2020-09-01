@@ -107,7 +107,7 @@ const AboutPage: React.FC = () => {
           I have a degree in Economics from <i>Moscow Business Academy under the Government of Moscow</i>, but every things I know of web
           development I have studied on my own.
         </p>
-        <p>I have experience in industrial web development for about 5 years.</p>
+        <p>I have experience in industrial web development for about 5.5 years.</p>
         <p>
           However, my real experience is still more. I started creating websites in 2002. It was the time where existed Internet Explorer 6
           and developers using tables for markup layout.
@@ -120,7 +120,7 @@ const AboutPage: React.FC = () => {
       </p>
       <div className='quality'>
         <p>
-          High quality is a main priority in my work. I prefer engineering solutions and hate it when people write code thoughtlessly. I
+          High quality is the main priority in my work. I prefer engineering solutions and hate it when people write code thoughtlessly. I
           enjoy writing clean code and designing application architecture. I also like reading the other developers' code. It broadens my
           ranges. Read more about my approach to work on the <Link to='/hire-me'>hire me</Link> page.
         </p>

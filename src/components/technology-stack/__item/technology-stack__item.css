@@ -1,0 +1,37 @@
+.content .technology-stack__item:not(:last-child) {
+  margin-right: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.technology-stack__item {
+  position: relative;
+  display: flex;
+  flex: auto;
+  align-items: center;
+  justify-content: center;
+  height: 10px;
+  padding: 0.6em;
+  flex: none;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  line-height: 1;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 5px 0 rgba(50, 50, 50, 0.2);
+  user-select: none;
+}
+
+.technology-stack__item-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+}
+
+.technology-stack__item-label {
+  position: relative;
+  z-index: 1;
+}
+

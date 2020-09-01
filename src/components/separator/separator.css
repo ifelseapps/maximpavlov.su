@@ -1,0 +1,29 @@
+.separator {
+  position: relative;
+  width: 50px;
+  height: 10px;
+  margin: 0 auto;
+  border: none;
+  background: url(./star.svg) no-repeat center;
+  background-size: contain;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: url(./star.svg) no-repeat center;
+  background-size: cover;
+}
+
+.separator::before {
+  left: 0;
+}
+
+.separator::after {
+  right: 0;
+}
