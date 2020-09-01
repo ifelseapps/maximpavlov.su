@@ -10,7 +10,7 @@ const AboutPage: React.FC = () => {
     query {
       main: file(relativePath: { eq: "main.jpg" }) {
         data: childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
+          fluid(maxWidth: 500, quality: 60) {
             aspectRatio
             src
             srcSet
@@ -20,7 +20,7 @@ const AboutPage: React.FC = () => {
       }
       dinosaur: file(relativePath: { eq: "dinosaur.jpg" }) {
         data: childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
+          fluid(maxWidth: 500, quality: 60) {
             aspectRatio
             src
             srcSet
@@ -30,7 +30,7 @@ const AboutPage: React.FC = () => {
       }
       wedding: file(relativePath: { eq: "wedding.jpg" }) {
         data: childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
+          fluid(maxWidth: 500, quality: 60) {
             aspectRatio
             src
             srcSet
@@ -40,7 +40,7 @@ const AboutPage: React.FC = () => {
       }
       boeing: file(relativePath: { eq: "boeing.jpg" }) {
         data: childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
+          fluid(maxWidth: 500, quality: 65) {
             aspectRatio
             src
             srcSet
@@ -50,7 +50,7 @@ const AboutPage: React.FC = () => {
       }
       giraffe: file(relativePath: { eq: "giraffe.jpg" }) {
         data: childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
+          fluid(maxWidth: 500, quality: 60) {
             aspectRatio
             src
             srcSet
@@ -60,7 +60,7 @@ const AboutPage: React.FC = () => {
       }
       sochi: file(relativePath: { eq: "sochi.jpg" }) {
         data: childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
+          fluid(maxWidth: 500, quality: 60) {
             aspectRatio
             src
             srcSet
@@ -70,7 +70,7 @@ const AboutPage: React.FC = () => {
       }
       waves: file(relativePath: { eq: "waves.jpg" }) {
         data: childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
+          fluid(maxWidth: 500, quality: 60) {
             aspectRatio
             src
             srcSet
