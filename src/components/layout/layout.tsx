@@ -45,7 +45,7 @@ export const Layout: React.FC<ILayoutProps> = ({ path, children }) => {
     <ConfigProvider>
       <div className={cnLayout()}>
         <Helmet>
-          <title>Max Pavlov</title>
+          <title>Max Pavlov, senior frontend engineer</title>
         </Helmet>
         <Header className={cnLayout('header')} renderMenu={renderTopMenu} />
         <Content className={cnLayout('main')}>{children}</Content>

@@ -4,6 +4,7 @@ import { Title } from '../components/title';
 import Img from 'gatsby-image';
 import './about.css';
 import { Content } from '../components/content';
+import { Helmet } from 'react-helmet';
 
 const AboutPage: React.FC = () => {
   const images = useStaticQuery(graphql`
@@ -83,6 +84,9 @@ const AboutPage: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>About me</title>
+      </Helmet>
       <Title level={1} className='content__row'>
         A little bit about me...
       </Title>
