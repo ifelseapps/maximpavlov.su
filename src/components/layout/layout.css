@@ -27,7 +27,6 @@ body {
 
 .layout__main {
   max-width: 1400px;
-  will-change: transform;
 }
 
 @media screen and (max-width: 767px) {
@@ -39,6 +38,10 @@ body {
 @media screen and (min-width: 768px ) {
   .layout__header {
     padding: 1rem 3rem;
+  }
+
+  .layout__main {
+    will-change: transform;
   }
 }
 
