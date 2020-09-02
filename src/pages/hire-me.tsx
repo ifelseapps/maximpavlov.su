@@ -1,12 +1,16 @@
 import React from 'react';
 import { Separator } from '../components/separator';
 import { TechnologyStack } from '../components/technology-stack';
+import { Title } from '../components/title';
 
 const IndexPage: React.FC = () => {
   return (
     <>
+      <Title level={1} className='content__row'>
+        Hire me
+      </Title>
       <div className='content__row'>
-        <p>I live in Russia and work remotely. I'm available from 9:00 to 18:00 Moscow time (UTC + 3).</p>
+        <p>I live in Russia and work remotely. I'm available from 9:00 to 17:30 Moscow time (UTC + 3).</p>
         <p>I prefer working with product teams.</p>
         <p>High quality is the main priority in my work, and I have my quality standards:</p>
         <ul>
@@ -29,7 +33,7 @@ const IndexPage: React.FC = () => {
             <strong>Accessible</strong>. A product needs to be usable by users of assistive technologies by default;
           </li>
           <li>
-            <strong>Clean code that is easy to maintain ans scale</strong>;
+            <strong>Clean code</strong> that is easy to maintain ans scale;
           </li>
         </ul>
         <p>If you do not agree with this approach then we are not going to work.</p>

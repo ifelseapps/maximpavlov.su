@@ -45,7 +45,7 @@ export const technologies: ITechnology[] = [
   { name: 'Akita', level: 'medium' },
   { name: 'Rx.js', level: 'confident' },
   { name: 'Node.js', level: 'confident' },
-  { name: 'Git', level: 'medium' },
+  { name: 'Git', level: 'confident' },
   { name: 'Linux', level: 'medium' },
   { name: 'SQL', level: 'medium' },
   { name: 'MongoDB', level: 'tried' },

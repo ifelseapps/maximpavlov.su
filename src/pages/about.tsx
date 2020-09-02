@@ -142,15 +142,15 @@ const AboutPage: React.FC = () => {
             <Link to='/travels/'>traveling</Link>.
           </p>
           <p>
-            I'm jolly man. I like to read paper books and hate digital books. I also enjoy walking because we live in a cityy that is more
+            I'm jolly man. I like to read paper books and hate digital books. I also enjoy walking because we live in a city that is more
             than 1000 years old. Our city is very beautiful.
           </p>
           <section>
             <Title level={2}>A few random facts about me</Title>
             <ul>
-              <li>I was born in utmost North (Arkhangelsk)</li>
-              <li>I know a little Hebrew and will continue to study it in the future</li>
-              <li>I have Jewish roots and study Jewish history, history of modern state of Israel, Judaism</li>
+              <li>I was born in utmost North (Arkhangelsk);</li>
+              <li>I know a little Hebrew and will continue to study it in the future;</li>
+              <li>I have Jewish roots and study Jewish history, history of modern state of Israel, Judaism;</li>
               <li>
                 I'm interested in civil aviation and a lot of reading and watching about that. I flew on full flight simulator Boeing 737 NG
                 in&nbsp;2019. It was my dream.
