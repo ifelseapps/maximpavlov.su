@@ -2,10 +2,14 @@ import React from 'react';
 import { Separator } from '../components/separator';
 import { TechnologyStack } from '../components/technology-stack';
 import { Title } from '../components/title';
+import { Helmet } from 'react-helmet';
 
 const IndexPage: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>Hire me</title>
+      </Helmet>
       <Title level={1} className='content__row'>
         Hire me
       </Title>
