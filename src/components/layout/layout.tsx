@@ -26,7 +26,7 @@ const getTopMenuRenderer = (path: string) => (menu: MenuConfig) => (
 const getBottomMenuRenderer = (path: string) => (config: IConfig) => (
   <Menu className={cnLayout('bottom-menu')}>
     {config.layout.menu.map((item) => (
-      <MenuItem key={item.path} href={item.path} selected={item.path === path}>
+      <MenuItem key={item.path} href={item.path} selected={item.path.includes(path)}>
         {item.name}
       </MenuItem>
     ))}
