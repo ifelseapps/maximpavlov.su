@@ -4,6 +4,24 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-yaml',
     {
+      resolve: 'gatsby-plugin-webfonts',
+      options: {
+        fonts: {
+          google: [
+            {
+              family: 'Roboto',
+              variants: ['400', '900'],
+              fontDisplay: 'swap',
+              strategy: 'selfHosted',
+            },
+          ],
+        },
+        formats: ['woff2'],
+        useMinify: true,
+        usePreload: true,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-layout',
       options: {
         component: require.resolve('./src/components/layout/index.ts'),
