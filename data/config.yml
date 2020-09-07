@@ -22,3 +22,12 @@ layout:
       path: /hire-me/
       highlighted: true
       pushed: true
+notes:
+  - date: 2020-04-16
+    name: The creation of a library in TypeScript
+    link: https://medium.com/@ifelseapps/создание-библиотеки-на-typescript-e7998e48c55
+    language: RUS
+  - date: 2020-09-07
+    name: State-driven development of user interface components
+    link: https://dev.to/ifelseapps/state-driven-development-of-user-interface-components-1f0g
+    language: ENG

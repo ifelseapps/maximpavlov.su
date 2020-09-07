@@ -1,8 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Title } from '../components/title';
+import { useConfig } from '../context/config';
 
 const IndexPage: React.FC = () => {
+  const { notes } = useConfig();
+
   return (
     <>
       <Helmet>
@@ -11,7 +14,15 @@ const IndexPage: React.FC = () => {
       <Title level={1} className='content__row'>
         Notes
       </Title>
-      <p className='content__row'>Coming soon.</p>
+      <ul className='content__row'>
+        {notes.map((note) => (
+          <li key={note.name}>
+            <a href={note.link} target='_blank'>
+              {note.name} ({note.language})
+            </a>
+          </li>
+        ))}
+      </ul>
     </>
   );
 };

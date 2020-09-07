@@ -21,6 +21,12 @@ export const ConfigProvider: FC = ({ children }) => {
             pushed
           }
         }
+        notes {
+          date
+          language
+          link
+          name
+        }
       }
     }
   `);

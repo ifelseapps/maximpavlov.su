@@ -11,4 +11,10 @@ export interface IConfig {
     description: string;
     menu: MenuConfig;
   };
+  notes: Array<{
+    date: Date;
+    name: string;
+    link: string;
+    language: string;
+  }>;
 }
