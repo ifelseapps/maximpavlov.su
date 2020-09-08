@@ -19,11 +19,16 @@ const IndexPage: React.FC = () => {
         . Follow me on{' '}
         <a href='https://www.twitter.com/ifelseapps' target='_blank'>
           Twitter
-        </a>{' '}
-        and{' '}
+        </a>
+        {', '}
         <a href='https://www.facebook.com/ifelseapps' target='_blank'>
           Facebook
+        </a>{' '}
+        and{' '}
+        <a href='https://www.github.com/ifelseapps' target='_blank'>
+          Github
         </a>
+        .
       </p>
     </>
   );

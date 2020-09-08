@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { Separator } from '../components/separator';
 import { TechnologyStack } from '../components/technology-stack';
 import { Title } from '../components/title';
@@ -49,14 +50,18 @@ const IndexPage: React.FC = () => {
           industries: ecommerce, medicine, hightech, fintech, tourism. According to the terms of the NDA I can't show these projects.
         </p>
       </div>
-      <Separator className='content__row' />
+      <Separator className='content__row'/>
       <div className='content__row'>
         <p>
           I know JavaScript, TypeScript, CSS, HTML at an expert level. My technology stack includes Angular and React, but I prefer using
           Angular.
         </p>
         <p>My technology stack:</p>
-        <TechnologyStack />
+        <TechnologyStack/>
+      </div>
+      <Separator className='content__row'/>
+      <div className='content__row'>
+        Do you have an interesting project? <Link to='/contacts/'>Write</Link> to me.
       </div>
     </>
   );
