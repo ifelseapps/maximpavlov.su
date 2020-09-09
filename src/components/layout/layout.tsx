@@ -16,7 +16,7 @@ export const cnLayout = cn('layout');
 const getTopMenuRenderer = (path: string) => (menu: MenuConfig) => (
   <Menu>
     {menu.map((item) => (
-      <MenuItem key={item.path} href={item.path} highlighted={item.highlighted} pushed={item.pushed} selected={path === item.path}>
+      <MenuItem key={item.path} href={item.path} highlighted={item.highlighted} pushed={item.pushed} selected={path.includes(item.path)}>
         {item.name}
       </MenuItem>
     ))}
@@ -26,7 +26,7 @@ const getTopMenuRenderer = (path: string) => (menu: MenuConfig) => (
 const getBottomMenuRenderer = (path: string) => (config: IConfig) => (
   <Menu className={cnLayout('bottom-menu')}>
     {config.layout.menu.map((item) => (
-      <MenuItem key={item.path} href={item.path} selected={item.path.includes(path)}>
+      <MenuItem key={item.path} href={item.path} selected={path.includes(item.path)}>
         {item.name}
       </MenuItem>
     ))}
