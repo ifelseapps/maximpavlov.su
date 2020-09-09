@@ -53,9 +53,17 @@ p {
     grid-column: 2 / 12;
   }
 
+  .content__header {
+    grid-column: 2 / 11;
+  }
+
   .content__row_important {
     grid-column: 2 / 10;
     font-size: 2rem;
+  }
+
+  .content__row-full-width {
+    grid-column: 1 / 13;
   }
 
   .content__row_remark {

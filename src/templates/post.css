@@ -1,0 +1,36 @@
+.html-content {
+  grid-row-gap: 0.8rem;
+}
+
+.html-content p {
+  grid-column: 2 / 12;
+}
+
+.html-content p:not(:first-child) {
+  margin: 1em 0 0 0;
+}
+
+.gatsby-resp-image-wrapper {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.img-float-left {
+  grid-column: 1 / 7;
+}
+
+.img-normal {
+  grid-column: 2 / 10;
+}
+
+.text-float-right {
+  grid-column: 7 / 12;
+}
+
+@media screen and (min-width: 768px) {
+  .text-float-right,
+  .text-float-left {
+    padding-top: 2em;
+    font-size: 1.6rem;
+  }
+}
