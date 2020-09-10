@@ -9,7 +9,7 @@ import { IConfig, MenuConfig } from '../../contracts/config';
 import { Header } from '../header';
 import { Menu, MenuItem } from '../menu';
 import { LayoutFooter } from './__footer';
-import { Content } from '../content';
+import { Transition } from '../transition';
 
 export const cnLayout = cn('layout');
 
@@ -48,7 +48,12 @@ export const Layout: React.FC<ILayoutProps> = ({ path, children }) => {
           <title>Max Pavlov, senior frontend engineer</title>
         </Helmet>
         <Header className={cnLayout('header')} renderMenu={renderTopMenu} />
-        <Content className={cnLayout('main')}>{children}</Content>
+        <div className={cnLayout('main')}>
+          <Transition path={path}>
+            {children}
+          </Transition>
+        </div>
+
         <LayoutFooter className={cnLayout('footer')}>
           <ConfigConsumer>{renderBottomMenu}</ConfigConsumer>
           <div className={cnLayout('copyright')}>
