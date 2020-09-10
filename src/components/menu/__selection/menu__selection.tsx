@@ -21,19 +21,19 @@ export const MenuSelection: React.FC = () => {
     ref.current.parentElement.addEventListener('mouseleave', onMouseLeaveHandler);
 
     function onMouseOverHandler(e: Event) {
-      const target = e.target as HTMLElement;
-      if (!target.closest('li')) {
-        return;
-      }
-      const itemPosition = target.getBoundingClientRect();
-      const width = Math.floor(itemPosition.width);
-      const left = Math.floor(itemPosition.left - firstItemPosition.left);
-      if (ref.current) {
-        ref.current.style.transition = 'transform 0.7s cubic-bezier(0.68, -0.6, 0.32, 1.6)';
-        ref.current.style.width = `${width}px`;
-        ref.current.style.transform = `translate(${left}px, -50%)`;
-      }
-    }
+                                            const target = e.target as HTMLElement;
+                                            if (!target.closest('li') || target.closest('.menu__item_pushed')) {
+                                              return;
+                                            }
+                                            const itemPosition = target.getBoundingClientRect();
+                                            const width = Math.ceil(itemPosition.width);
+                                            const left = Math.ceil(itemPosition.left - firstItemPosition.left);
+                                            if (ref.current) {
+                                              ref.current.style.transition = 'transform 0.7s cubic-bezier(0.68, -0.6, 0.32, 1.6)';
+                                              ref.current.style.width = `${width}px`;
+                                              ref.current.style.transform = `translate(${left}px, -50%)`;
+                                            }
+                                          }
 
     function onMouseLeaveHandler() {
       if (ref.current) {

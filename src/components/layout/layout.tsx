@@ -13,18 +13,15 @@ import { Content } from '../content';
 
 export const cnLayout = cn('layout');
 
-const getTopMenuRenderer = (path: string) => (menu: MenuConfig) => {
-  console.log('__PATH__', path, menu);
-  return (
-    <Menu animation>
-      {menu.map((item) => (
-        <MenuItem key={item.path} href={item.path} highlighted={item.highlighted} pushed={item.pushed} selected={path.includes(item.path)}>
-          {item.name}
-        </MenuItem>
-      ))}
-    </Menu>
-  );
-};
+const getTopMenuRenderer = (path: string) => (menu: MenuConfig) => (
+  <Menu animation>
+    {menu.map((item) => (
+      <MenuItem key={item.path} href={item.path} highlighted={item.highlighted} pushed={item.pushed} selected={path.includes(item.path)}>
+        {item.name}
+      </MenuItem>
+    ))}
+  </Menu>
+);
 
 const getBottomMenuRenderer = (path: string) => (config: IConfig) => (
   <Menu className={cnLayout('bottom-menu')}>
