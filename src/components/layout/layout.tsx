@@ -14,7 +14,7 @@ import { Content } from '../content';
 export const cnLayout = cn('layout');
 
 const getTopMenuRenderer = (path: string) => (menu: MenuConfig) => (
-  <Menu>
+  <Menu animation>
     {menu.map((item) => (
       <MenuItem key={item.path} href={item.path} highlighted={item.highlighted} pushed={item.pushed} selected={path.includes(item.path)}>
         {item.name}

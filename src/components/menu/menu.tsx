@@ -5,20 +5,25 @@ import { MenuItem } from './__item/menu__item';
 import { MenuLink } from './__link/menu__link';
 import './menu.css';
 import { getClassName } from './utils';
+import { MenuSelection } from './__selection/menu__selection';
 
 type MenuItemProps = React.ComponentProps<typeof MenuItem>;
 
 export interface IMenuProps extends IClassNameProps {
   children: Array<ReactElement<MenuItemProps, typeof MenuItem>>;
+  animation?: boolean;
 }
 
-export const Menu: React.FC<IMenuProps> = ({ children, className }) => {
+export const Menu: React.FC<IMenuProps> = ({ children, animation, className }) => {
   return (
-    <ul className={classnames(getClassName(), className)}>
-      {children.map((child) =>
-        React.cloneElement<MenuItemProps>(child, undefined, <MenuLink href={child.props.href}>{child.props.children}</MenuLink>),
-      )}
-    </ul>
+    <div className={classnames(getClassName(), className)}>
+      <ul className={getClassName('inner')}>
+        {children.map((child) =>
+          React.cloneElement<MenuItemProps>(child, undefined, <MenuLink href={child.props.href}>{child.props.children}</MenuLink>),
+        )}
+      </ul>
+      {animation && <MenuSelection />}
+    </div>
   );
 };
 

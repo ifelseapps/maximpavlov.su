@@ -1,4 +1,10 @@
 .menu {
+  position: relative;
+  padding: 2px;
+  overflow: hidden;
+}
+
+.menu__inner {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -15,7 +21,8 @@
 }
 
 @media screen and (min-width: 768px) {
-  .menu {
+  .menu__inner {
     margin: 0;
+    justify-content: center;
   }
 }

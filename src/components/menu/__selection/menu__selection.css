@@ -1,0 +1,9 @@
+.menu__selection {
+  position: absolute;
+  top: 50%;
+  left: -0.25em;
+  transform: translate(-100%, -50%);
+  height: 100%;
+  background: var(--primary-100);
+  border-radius: 0.2em;
+}
