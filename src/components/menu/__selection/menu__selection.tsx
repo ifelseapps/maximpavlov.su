@@ -6,7 +6,8 @@ export const MenuSelection: React.FC = () => {
   const ref = React.useRef<HTMLDivElement | null>(null);
 
   React.useEffect(() => {
-    if (!ref.current?.parentElement) {
+    const isTouchDevice = 'ontouchstart' in window;
+    if (!ref.current?.parentElement || isTouchDevice) {
       return;
     }
     const firstItem = ref.current.parentElement.querySelector('.menu__item');
@@ -21,19 +22,19 @@ export const MenuSelection: React.FC = () => {
     ref.current.parentElement.addEventListener('mouseleave', onMouseLeaveHandler);
 
     function onMouseOverHandler(e: Event) {
-                                            const target = e.target as HTMLElement;
-                                            if (!target.closest('li') || target.closest('.menu__item_pushed')) {
-                                              return;
-                                            }
-                                            const itemPosition = target.getBoundingClientRect();
-                                            const width = Math.ceil(itemPosition.width);
-                                            const left = Math.ceil(itemPosition.left - firstItemPosition.left);
-                                            if (ref.current) {
-                                              ref.current.style.transition = 'transform 0.7s cubic-bezier(0.68, -0.6, 0.32, 1.6)';
-                                              ref.current.style.width = `${width}px`;
-                                              ref.current.style.transform = `translate(${left}px, -50%)`;
-                                            }
-                                          }
+      const target = e.target as HTMLElement;
+      if (!target.closest('li') || target.closest('.menu__item_pushed')) {
+        return;
+      }
+      const itemPosition = target.getBoundingClientRect();
+      const width = Math.ceil(itemPosition.width);
+      const left = Math.ceil(itemPosition.left - firstItemPosition.left);
+      if (ref.current) {
+        ref.current.style.transition = 'transform 0.7s cubic-bezier(0.68, -0.6, 0.32, 1.6)';
+        ref.current.style.width = `${width}px`;
+        ref.current.style.transform = `translate(${left}px, -50%)`;
+      }
+    }
 
     function onMouseLeaveHandler() {
       if (ref.current) {
