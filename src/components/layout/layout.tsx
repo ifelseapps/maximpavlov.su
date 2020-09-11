@@ -49,15 +49,26 @@ export const Layout: React.FC<ILayoutProps> = ({ path, children }) => {
         </Helmet>
         <Header className={cnLayout('header')} renderMenu={renderTopMenu} />
         <div className={cnLayout('main')}>
-          <Transition path={path}>
-            {children}
-          </Transition>
+          <Transition path={path}>{children}</Transition>
         </div>
 
         <LayoutFooter className={cnLayout('footer')}>
           <ConfigConsumer>{renderBottomMenu}</ConfigConsumer>
           <div className={cnLayout('copyright')}>
-            &copy;&nbsp;2018 &mdash; {year}&nbsp;<strong>Max Pavlov</strong>. All&nbsp;right&nbsp;reserved
+            <p>
+              &copy;&nbsp;2018 &mdash; {year}&nbsp;<strong>Max Pavlov</strong>. All&nbsp;right&nbsp;reserved
+            </p>
+            <p className={cnLayout('legal')}>
+              Icons made by{' '}
+              <a href='https://www.flaticon.com/authors/freepik' title='Freepik' target='_blank'>
+                Freepik
+              </a>
+              {' '}from{' '}
+              <a href='https://www.flaticon.com/' title='Flaticon' target='_blank'>
+                {' '}
+                www.flaticon.com
+              </a>
+            </p>
           </div>
         </LayoutFooter>
       </div>

@@ -15,7 +15,10 @@ export interface ILogoProps extends IClassNameProps {
 }
 export const Logo: React.FC<ILogoProps> = ({ name, position, className }) => (
   <Link className={classnames(cnLogo(), className)} to='/'>
-    <LogoName>{name}</LogoName>
-    <LogoPosition>{position}</LogoPosition>
+    <div className={cnLogo('avatar')} />
+    <div>
+      <LogoName>{name}</LogoName>
+      <LogoPosition>{position}</LogoPosition>
+    </div>
   </Link>
 );
