@@ -12,6 +12,11 @@ body {
   height: 100%;
 }
 
+::selection {
+  background-color: var(--dark-900);
+  color: #fff;
+}
+
 .layout {
   display: grid;
   grid-template-rows: max-content 1fr max-content;
