@@ -49,5 +49,7 @@ export const technologies: ITechnology[] = [
   { name: 'Git', level: 'confident' },
   { name: 'Linux', level: 'medium' },
   { name: 'SQL', level: 'medium' },
+  { name: 'PHP', level: 'medium' },
+  { name: 'Python', level: 'tried' },
   { name: 'MongoDB', level: 'tried' },
 ];
