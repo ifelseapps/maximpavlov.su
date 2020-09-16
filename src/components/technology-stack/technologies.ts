@@ -35,6 +35,7 @@ export const technologies: ITechnology[] = [
   { name: 'TypeScript', level: 'expert' },
   { name: 'React', level: 'confident' },
   { name: 'Angular', level: 'confident' },
+  { name: 'jQuery', level: 'expert' },
   { name: 'Sass', level: 'expert' },
   { name: 'Less', level: 'expert' },
   { name: 'BEM', level: 'expert' },
