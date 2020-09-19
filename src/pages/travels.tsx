@@ -6,7 +6,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 const IndexPage: React.FC = () => {
   const result = useStaticQuery(graphql`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: [frontmatter___year], order: DESC }) {
         nodes {
           frontmatter {
             slug
