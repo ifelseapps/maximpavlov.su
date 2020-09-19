@@ -14,7 +14,7 @@ export interface IMenuProps extends IClassNameProps {
   animation?: boolean;
 }
 
-export const Menu: React.FC<IMenuProps> = ({ children, animation, className }) => {
+export const Menu: React.FC<IMenuProps> = React.memo(({ children, animation, className }) => {
   return (
     <div className={classnames(getClassName(), className)}>
       <ul className={getClassName('inner')}>
@@ -25,6 +25,6 @@ export const Menu: React.FC<IMenuProps> = ({ children, animation, className }) =
       {animation && <MenuSelection />}
     </div>
   );
-};
+});
 
 export { MenuItem } from './__item/menu__item';
