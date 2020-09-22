@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Title } from '../components/title';
+import { ProjectsGrid, ProjectsGridItem } from '../components/projects-grid';
 
 const IndexPage: React.FC = () => {
   return (
@@ -11,7 +12,14 @@ const IndexPage: React.FC = () => {
       <Title level={1} className='content__row'>
         Projects
       </Title>
-      <p className='content__row'>Coming soon.</p>
+      <ProjectsGrid>
+        <ProjectsGridItem color='#4FC3F7' columns='2 / 7' rows='2 / 2' link='https://github.com/ifelseapps/mock-server'>
+          <Title as='div' level={3}>
+            Mock server
+          </Title>
+          <p>The simple mock server that accepts CLI options: code and body of response/file with body of the response, route, timeout</p>
+        </ProjectsGridItem>
+      </ProjectsGrid>
     </>
   );
 };

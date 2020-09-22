@@ -1,0 +1,8 @@
+.projects-grid__item {
+  border: solid 3px var(--color);
+  background: var(--color);
+}
+
+.projects-grid__item:hover {
+  background: transparent;
+}

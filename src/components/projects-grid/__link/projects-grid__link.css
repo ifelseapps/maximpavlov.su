@@ -1,0 +1,10 @@
+.projects-grid__link,
+.projects-grid__link:hover {
+  color: inherit!important;
+}
+
+.projects-grid__link {
+  display: block;
+  padding: 1.5em 2em;
+  text-decoration: none;
+}
