@@ -1,5 +1,6 @@
 .projects-grid__item {
   border: solid 3px var(--color);
+  transition: background-color 0.3s;
   background: var(--color);
 }
 

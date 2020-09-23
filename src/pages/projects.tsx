@@ -13,7 +13,7 @@ const IndexPage: React.FC = () => {
         Projects
       </Title>
       <ProjectsGrid>
-        <ProjectsGridItem color='#4FC3F7' columns='2 / 7' rows='2 / 2' link='https://github.com/ifelseapps/mock-server'>
+        <ProjectsGridItem color='#1DE9B6' columns='2 / 7' rows='2 / 2' link='https://github.com/ifelseapps/mock-server'>
           <Title as='div' level={3}>
             Mock server
           </Title>
