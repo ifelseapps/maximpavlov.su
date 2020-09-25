@@ -5,7 +5,7 @@ const IndexPage: React.FC = () => {
   return (
     <>
       <p className='content__row content__row_important'>
-        I'm a senior frontend engineer & mentor from cold, snowy Russia with <strong>more than 5 years of experience</strong>.
+        I'm a senior UI engineer & mentor from cold, snowy Russia with <strong>more than 5 years of experience</strong>.
       </p>
       <p className='content__row'>
         I create modern, resilient, user-friendly interfaces for web applications. I also develop <strong>design-systems</strong> and{' '}
