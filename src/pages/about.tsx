@@ -96,7 +96,7 @@ const AboutPage: React.FC = () => {
           Hi! My name is Max (Max being short for <i>Maksim</i>)
         </p>
         <p>
-          I'm a senior frontend engineer, based in Russia. My work lies at the intersection of programming and design. I create and improve
+          I'm a senior UI engineer, based in Russia. My work lies at the intersection of programming and design. I create and improve
           user interfaces for web applications that used thousands of users.
         </p>
         <p>
