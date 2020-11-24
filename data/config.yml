@@ -4,22 +4,22 @@ layout:
   menu:
     -
       name: About
-      path: /about/
+      path: /about
     -
       name: Projects
-      path: /projects/
+      path: /projects
     -
       name: Travels
-      path: /travels/
+      path: /travels
     -
       name: Notes
-      path: /notes/
+      path: /notes
     -
       name: Contacts
-      path: /contacts/
+      path: /contacts
     -
       name: Hire Me
-      path: /hire-me/
+      path: /hire-me
       highlighted: true
       pushed: true
 notes:
