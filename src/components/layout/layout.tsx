@@ -13,6 +13,9 @@ import { Transition } from '../transition';
 
 export const cnLayout = cn('layout');
 
+const setKeyboardMode = () => document.body.classList.add('keyboard-mode');
+const setMouseMode = () => document.body.classList.remove('keyboard-mode');
+
 const getTopMenuRenderer = (path: string) => (menu: MenuConfig) => (
   <Menu animation>
     {menu.map((item) => (
@@ -41,6 +44,16 @@ export const Layout: React.FC<ILayoutProps> = ({ path, children }) => {
   const year = React.useMemo(() => new Date().getFullYear(), []);
   const renderTopMenu = React.useCallback(getTopMenuRenderer(path), [path]);
   const renderBottomMenu = React.useCallback(getBottomMenuRenderer(path), [path]);
+
+  React.useEffect(() => {
+    document.addEventListener('keydown', setKeyboardMode);
+    document.addEventListener('mousedown', setMouseMode);
+    return () => {
+      document.removeEventListener('keydown', setKeyboardMode);
+      document.removeEventListener('mousedown', setMouseMode);
+    };
+  }, []);
+
   return (
     <ConfigProvider>
       <div className={cnLayout()}>

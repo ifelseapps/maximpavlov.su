@@ -8,6 +8,10 @@
 }
 
 .logo:focus {
+  outline: 0;
+}
+
+.keyboard-mode .logo:focus {
   outline: solid 2px var(--primary-400);
   outline-offset: 8px;
 }

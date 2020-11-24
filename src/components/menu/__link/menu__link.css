@@ -8,5 +8,8 @@
 
 .menu__link:focus {
   outline: 0;
+}
+
+.keyboard-mode .menu__link:focus {
   box-shadow: 0 0 0 0.1em var(--primary-400);
 }
