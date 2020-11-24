@@ -24,7 +24,7 @@ p {
   outline: 0;
 }
 
-.keyboard-mode a:focus {
+.keyboard-mode .content a:focus {
   box-shadow: 0 0 0 0.1em var(--primary-400);
 }
 
