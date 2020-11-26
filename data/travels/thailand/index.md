@@ -4,11 +4,13 @@ year: 2014
 slug: thailand-2014
 ---
 
-[[img-left]]
-| ![Pataya](./pataya.jpg)
-
-[[text-right]]
+[[preview-text]]
 | We visited Thailand in 2014. It was an amazing journey. I have liked the nature, mentality of the Thais, massage.
+
+[[img-normal]]
+| ![Pataya](./pataya.jpg)
+[[img-desc]]
+| Pataya
 
 We rented a yacht and sailed between the islands.
 
@@ -36,6 +38,8 @@ We saw many beautiful animals at arm's length: elephants, tigers, giraffes, croc
 | ![Crocodile](./crocodile2.jpg)
 
 
-I didn't dare eat insects.
 [[img-normal]]
 | ![Insects](./insects.jpg)
+
+[[img-desc]]
+| Just photo :) I didn't dare eat insects.

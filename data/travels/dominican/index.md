@@ -4,11 +4,11 @@ year: 2020
 slug: dominican-2020
 ---
 
-[[img-left]]
-| ![Beach](./beach.jpg)
-
-[[text-right]]
+[[preview-text]]
 | We had flying to the Dominican Republic in the spring 2020. The Dominican Republic is located on an island called "Hispaniola". We were on the Atlantic coast of the island.
+
+[[img-normal]]
+| ![Beach](./beach.jpg)
 
 We were staying at the _Casa Marina Beach hotel_.
 
