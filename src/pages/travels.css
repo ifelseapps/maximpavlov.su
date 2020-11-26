@@ -1,0 +1,4 @@
+.travels-groups {}
+.travels-groups__item:not(:last-child) {
+  margin-bottom: 3em;
+}
