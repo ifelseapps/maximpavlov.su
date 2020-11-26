@@ -12,12 +12,15 @@ p {
 
 .content a {
   color: inherit;
-  font-weight: 500;
-  transition: color 0.2s;
+  line-height: 1;
+  transition: color 0.2s, border-color 0.2s;
+  text-decoration: none;
+  border-bottom: solid 1px var(--dark-200);
 }
 
 .content a:hover {
   color: var(--primary-a-700);
+  border-color: var(--primary-a-700);
 }
 
 .content a:focus {
@@ -25,7 +28,8 @@ p {
 }
 
 .keyboard-mode .content a:focus {
-  box-shadow: 0 0 0 0.1em var(--primary-400);
+  outline: solid 2px var(--primary-400);
+  outline-offset: 2px;
 }
 
 @media screen and (max-width: 767px) {
