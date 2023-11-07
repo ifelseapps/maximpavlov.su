@@ -12,6 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "eleventy-plugin-rev": "^1.1.1",
+    "eleventy-sass": "^2.2.3",
     "prettier": "^3.0.3"
   }
 }

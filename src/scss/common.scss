@@ -1,0 +1,8 @@
+@import 'mixins';
+
+body {
+  background-color: lightgray;
+  @include media(lg) {
+    background-color: azure;
+  }
+}
