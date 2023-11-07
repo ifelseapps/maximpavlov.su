@@ -2,6 +2,15 @@ const sass = require('eleventy-sass')
 const rev = require('eleventy-plugin-rev')
 
 module.exports = (config) => {
+  const data = {
+    layout: 'layouts/default.njk',
+  }
+
+  for (const key in data) {
+    const value = data[key]
+    config.addGlobalData(key, value)
+  }
+
   config.addPlugin(rev)
   config.addPlugin(sass, {
     compileOptions: {
