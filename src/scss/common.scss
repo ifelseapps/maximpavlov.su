@@ -1,7 +1,53 @@
 @import 'mixins';
 @import 'fonts';
+@import 'layout';
+
+html,
+body {
+  height: 100%;
+}
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'PTSansRegular', sans-serif;
   font-size: 16px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+a {
+  line-height: 1em;
+  text-decoration: none;
+  color: inherit;
+  &:not([class]) {
+    color: #2962ff;
+    text-decoration: underline;
+    text-decoration-color: #90caf9;
+    text-decoration-thickness: 0.05em;
+    text-underline-offset: 0.2em;
+    transition:
+      background-color 0.3s,
+      text-decoration-color 0.3s;
+    &:hover {
+      background-color: #ffecb3;
+      text-decoration-color: transparent;
+    }
+  }
+}
+
+p {
+  margin: 0;
+  line-height: 1.5em;
+  &:not([class]) {
+    margin: 1em 0;
+  }
 }

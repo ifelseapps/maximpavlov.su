@@ -3,11 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ "/css/common.css" | rev }}" />
+    <link rel="stylesheet" href="{{ "/css/common.css" }}" />
     <title>{{ title }}</title>
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
+    <div class="page">
+      <div>
+        <header class="header container page__header">
+          <a class="header__name" href="/">Максим Павлов</a>
+          <nav class="menu header__menu">
+            <a class="menu__item" href="#">Заметки</a>
+            <a class="menu__item" href="#">Путешествую</a>
+            <a class="menu__item" href="#">Теги</a>
+            <a class="menu__item" href="#">Проекты</a>
+          </nav>
+        </header>
+        <main class="container page__content">
+          {{ content | safe }}
+        </main>
+      </div>
+      <footer class="footer container page__footer">
+        <div class="menu">
+          <a class="menu__item" href="mailto:me@maximpavlov.su">Электропочта</a>
+          <a class="menu__item" href="https://t.me/ifelseapps">Телеграмм</a>
+          <a class="menu__item" href="https://github.com/ifelseapps">Github</a>
+        </div>
+        <p class="footer__copyright">&copy;&nbsp;2014+ Максим Павлов</p>
+      </footer>
+    </div>
   </body>
 </html>

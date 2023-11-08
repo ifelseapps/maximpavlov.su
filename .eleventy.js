@@ -27,7 +27,7 @@ module.exports = (config) => {
       loadPaths: ['src/_includes/scss'],
       includes: 'src/_includes/scss',
     },
-    rev: true,
+    rev: false,
   })
 
   return {

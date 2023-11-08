@@ -1,0 +1,68 @@
+@import 'mixins';
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page__footer {
+  margin-top: auto;
+}
+
+.container {
+  padding: 0 1em;
+  @include media(lg) {
+    max-width: 90vw;
+    padding: 0 20em 0 10em;
+  }
+}
+
+.header {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.header__name {
+  font-family: 'PTSansBold', sans-serif;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+  &:hover {
+    color: #ff3d00;
+  }
+}
+
+.header__menu {
+  margin-top: 0.4em;
+}
+
+.menu {
+  display: flex;
+  gap: 0.6em;
+}
+
+.menu__item {
+  color: #2962ff;
+  text-decoration: underline;
+  text-decoration-color: #90caf9;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.2em;
+  transition:
+    color 0.3s,
+    text-decoration-color 0.3s;
+  &:hover {
+    color: #ff3d00;
+    text-decoration-color: #ff3d00;
+  }
+}
+
+.footer {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 0.9rem;
+}
+
+.footer__copyright {
+  margin-top: 0.8em;
+  color: #757575;
+}
