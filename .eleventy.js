@@ -11,6 +11,8 @@ module.exports = (config) => {
     config.addGlobalData(key, value)
   }
 
+  config.addPassthroughCopy('src/assets')
+
   config.addPlugin(rev)
   config.addPlugin(sass, {
     compileOptions: {
