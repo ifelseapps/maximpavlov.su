@@ -1,6 +1,24 @@
 ---
 title: Home page
 ---
+{% block custom_head %}
+  <link rel="stylesheet" href="{{ "/css/home.css" }}" />
+{% endblock %}
 
-<p>Index page content</p>
-<p><a href="/">Ссылка</a></p>
+<div class="home-page">
+  <div class="home-page__column">
+    <picture>
+      <source srcset="/assets/images/photo.webp" type="image/webp">
+      <source srcset="/assets/images/photo.jpg" type="image/jpeg">
+      <img class="image" src="/assets/images/photo.jpg" alt="Моя фотография">
+    </picture>
+    <p>Привет! Я — Максим, разработчик интерфейсов и консультант.
+      Помогаю компаниям превратить статичный макет в работающий сайт или веб-приложение.</p>
+    <p>Я работаю во фронтенд-команде сайта <a href="https://food.ru">food.ru</a>.
+      А до этого — в команде <a href="https://profile.mts.ru">МТС Профиль</a>.
+      Мой опыт веб-разработки — 10 лет. А до этого я управлял проектами.</p>
+  </div>
+  <div class="home-page__column">
+    Right column
+  </div>
+</div>
