@@ -13,8 +13,9 @@
 .container {
   padding: 0 1em;
   @include media(lg) {
-    max-width: 90vw;
+    max-width: 1400px;
     padding: 0 20em 0 10em;
+    box-sizing: border-box;
   }
 }
 
