@@ -25,8 +25,8 @@
 }
 
 .header__name {
-  font-family: 'PTSansBold', sans-serif;
   font-size: 1.2rem;
+  font-weight: 700;
   transition: color 0.3s;
   &:hover {
     color: #ff3d00;
@@ -38,8 +38,16 @@
 }
 
 .menu {
+  margin: 0;
+  padding: 0;
   display: flex;
   gap: 0.6em;
+  list-style: none;
+}
+
+.menu_theme_years .menu__item_selected {
+  padding: 0 2px;
+  background-color: #ffecb3;
 }
 
 .footer {
