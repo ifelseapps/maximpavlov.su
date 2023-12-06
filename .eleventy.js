@@ -4,6 +4,8 @@ const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 const markdownItAttrs = require('markdown-it-attrs')
 const markdownItFootnote = require('markdown-it-footnote')
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const Image = require('@11ty/eleventy-img')
 const { format } = require('date-fns')
 
 /** @param {import("@11ty/eleventy").UserConfig} config */
@@ -36,6 +38,8 @@ module.exports = (config) => {
     rev: false,
   })
 
+  config.addPlugin(syntaxHighlight)
+
   const md = markdownIt({
     html: true,
     linkify: true,
@@ -63,6 +67,7 @@ module.exports = (config) => {
     return groups
   })
 
+  /** @todo Дать более релевантное название */
   config.addFilter('objectKeys', (value) => {
     return Object.keys(value).sort((a, b) => b - a)
   })
@@ -70,6 +75,47 @@ module.exports = (config) => {
   config.addFilter('dateAndMonth', (value) => {
     return format(value, 'dd.MM')
   })
+
+  config.addPairedShortcode('quote', (content, author, link) => {
+    const authorHtml = author
+      ? `<footer class="blockquote__footer"><a href="${link}">${author}</a></footer>`
+      : ''
+    return `
+      <blockquote class="blockquote">
+        ${content.trim()}
+        ${authorHtml}
+      </blockquote>
+    `
+  })
+
+  config.addPairedShortcode('figure', (content, caption) => {
+    return `<figure class="figure">${content}${
+      caption
+        ? `<figcaption class="figure__caption">${caption}</figcaption>`
+        : ''
+    }</figure>`
+  })
+
+  config.addShortcode(
+    'image',
+    async (src, alt, sizes = '(min-width: 30em) 50vw, 100vw') => {
+      const metadata = await Image(src, {
+        widths: [320, 640, 960, 1200, 1800],
+        formats: ['webp', 'jpeg'],
+        urlPath: '/images/',
+        outputDir: './_site/images/',
+      })
+
+      const imageAttributes = {
+        alt,
+        sizes,
+        loading: 'lazy',
+        decoding: 'async',
+      }
+
+      return Image.generateHTML(metadata, imageAttributes)
+    },
+  )
 
   return {
     dir: {
