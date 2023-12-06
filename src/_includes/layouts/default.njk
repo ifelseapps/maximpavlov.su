@@ -17,17 +17,18 @@
             <nav class="menu">
               <a {{ " class=selected" if '/notes/' in page.url }} href="/notes/{{ collections.notesByYear | objectKeys | first }}/">Заметки</a>
               <a href="#">Путешествую</a>
-              <a href="#">Теги</a>
+              <a {{ " class=selected" if '/tags/' in page.url }} href="/tags/">Теги</a>
               <a href="#">Проекты</a>
             </nav>
           </div>
         </header>
         <main class="container page__content">
-          {% if page.url !== '/' %}
-            <h1>{{ title }}</h1>
-          {% endif %}
-
-          {{ content | safe }}
+          {% block content %}
+            {% if page.url !== '/' %}
+              <h1>{{ title }}</h1>
+            {% endif %}
+            {{ content | safe }}
+          {% endblock content %}
         </main>
       </div>
       <footer class="footer container page__footer">

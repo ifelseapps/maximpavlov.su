@@ -1,0 +1,27 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+<article>
+  <header>
+    <h1>{{ title }}</h1>
+    <div>{{ data.date | date }}</div>
+  </header>
+  {{ content | safe }}
+  <footer>
+    {% if tags %}
+      <ul>
+        {% for tag in tags %}
+          {% if tag != 'note' %}
+            <li>
+              <a href="/tags/{{ tag }}/">{{ tag }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <div>
+      Краткий текст обо мне
+    </div>
+  </footer>
+</article>
+{% endblock content %}

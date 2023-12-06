@@ -67,13 +67,54 @@ module.exports = (config) => {
     return groups
   })
 
+  config.addCollection('tagsByFirstLetter', (api) => {
+    let tagSet = new Set()
+    const count = {}
+    api.getAll().forEach(function (item) {
+      if ('tags' in item.data) {
+        let tags = item.data.tags
+
+        tags.forEach((t) => (count[t] = (count[t] || 0) + 1))
+
+        tags = tags.filter(function (item) {
+          switch (item) {
+            case 'all':
+            case 'nav':
+            case 'note':
+            case 'notes':
+            case 'travel':
+            case 'travels':
+              return false
+          }
+
+          return true
+        })
+
+        for (const tag of tags) {
+          tagSet.add(tag)
+        }
+      }
+    })
+
+    return [...tagSet].reduce((acc, t) => {
+      const firstLetter = t.slice(0, 1)
+      acc[firstLetter] = acc[firstLetter] || []
+      acc[firstLetter].push({ name: t, count: count[t] })
+      return acc
+    }, {})
+  })
+
   /** @todo Дать более релевантное название */
   config.addFilter('objectKeys', (value) => {
     return Object.keys(value).sort((a, b) => b - a)
   })
 
   config.addFilter('dateAndMonth', (value) => {
-    return format(value, 'dd.MM')
+    return format(value || new Date(), 'dd.MM')
+  })
+
+  config.addFilter('date', (value) => {
+    return format(value || new Date(), 'dd.MM.yyyy')
   })
 
   config.addPairedShortcode('quote', (content, author, link) => {

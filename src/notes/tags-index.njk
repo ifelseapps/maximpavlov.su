@@ -1,0 +1,17 @@
+---
+layout: layouts/default.njk
+title: Теги
+permalink: /tags/
+---
+
+{% for letter, tags in collections.tagsByFirstLetter %}
+<h2>{{ letter | upper }}</h2>
+<ul>
+  {% for tag in tags %}
+  <li>
+    <a href="/tags/{{ tag.name }}/">{{ tag.name }}</a>
+    <span class="tag-count">({{ tag.count }})</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}
