@@ -96,12 +96,14 @@ module.exports = (config) => {
       }
     })
 
-    return [...tagSet].reduce((acc, t) => {
+    const groups = [...tagSet].reduce((acc, t) => {
       const firstLetter = t.slice(0, 1)
       acc[firstLetter] = acc[firstLetter] || []
       acc[firstLetter].push({ name: t, count: count[t] })
       return acc
     }, {})
+
+    return { groups, letters: Object.keys(groups).sort() }
   })
 
   /** @todo Дать более релевантное название */
@@ -115,6 +117,13 @@ module.exports = (config) => {
 
   config.addFilter('date', (value) => {
     return format(value || new Date(), 'dd.MM.yyyy')
+  })
+
+  config.addFilter('reverse', (arr) => {
+    if (!Array.isArray(arr)) {
+      return arr
+    }
+    return [...arr].reverse()
   })
 
   config.addPairedShortcode('quote', (content, author, position, link) => {

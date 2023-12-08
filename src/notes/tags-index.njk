@@ -4,10 +4,10 @@ title: Теги
 permalink: /tags/
 ---
 
-{% for letter, tags in collections.tagsByFirstLetter %}
+{% for letter in collections.tagsByFirstLetter.letters %}
 <h2>{{ letter | upper }}</h2>
 <ul>
-  {% for tag in tags %}
+  {% for tag in collections.tagsByFirstLetter.groups[letter] %}
   <li>
     <a href="/tags/{{ tag.name }}/">{{ tag.name }}</a>
     <span class="tag-count">({{ tag.count }})</span>
