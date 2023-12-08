@@ -1,26 +1,28 @@
 {% extends "layouts/default.njk" %}
 
 {% block content %}
-<article>
-  <header>
+<article class="post-detail">
+  <header class="post-detail__header">
+    <div class="post-date post-detail__date">{{ date | date }}</div>
     <h1>{{ title }}</h1>
-    <div>{{ data.date | date }}</div>
   </header>
   {{ content | safe }}
   <footer>
     {% if tags %}
-      <ul>
+      <ul class="post-tags-list post-detail__tags">
         {% for tag in tags %}
           {% if tag != 'note' %}
             <li>
-              <a href="/tags/{{ tag }}/">{{ tag }}</a>
+              <a href="/tags/{{ tag }}/">#{{ tag }}</a>
             </li>
           {% endif %}
         {% endfor %}
       </ul>
     {% endif %}
-    <div>
-      Краткий текст обо мне
+    <div class="post-author post-detail__author">
+      <p>Я разработчик интерфейсов с опытом 10+ лет. Сейчас работаю в команде сайта <a href="https://food.ru">food.ru</a>,
+        а до этого был в команде <a href="https://profile.mts.ru">МТС Профиль</a>.</p>
+      <p>Для HR'ов у меня есть <a href="/cv/">резюме</a>.</p>
     </div>
   </footer>
 </article>

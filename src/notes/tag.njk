@@ -13,4 +13,4 @@ eleventyComputed:
 ---
 
 {% import "_posts.njk" as posts %}
-{{ posts.list(collections[tag]) }}
+{{ posts.list(collections[tag], true) }}

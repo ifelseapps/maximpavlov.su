@@ -12,12 +12,15 @@
     <div class="page">
       <div>
         <header class="header container page__header">
-          <a class="header__name" href="/">Максим Павлов</a>
+          <a class="header__name" href="/">
+            Максим Павлов
+            <span class="header__profession">&mdash;&nbsp;senior frontend engineer</span>
+          </a>
           <div class="header__menu">
             <nav class="menu">
-              <a {{ " class=selected" if '/notes/' in page.url }} href="/notes/{{ collections.notesByYear | objectKeys | first }}/">Заметки</a>
+              <a class="menu__item{{ " menu__item_selected" if '/notes/' in page.url }}" href="/notes/{{ collections.notesByYear | objectKeys | first }}/">Заметки</a>
               <a href="#">Путешествую</a>
-              <a {{ " class=selected" if '/tags/' in page.url }} href="/tags/">Теги</a>
+              <a class="menu__item{{ " menu__item_selected" if '/tags/' in page.url }}" href="/tags/">Теги</a>
               <a href="#">Проекты</a>
             </nav>
           </div>

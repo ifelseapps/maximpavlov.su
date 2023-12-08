@@ -1,8 +1,12 @@
-{% macro list(posts) %}
+{% macro list(posts, fullDate = false) %}
 <ol class="posts-list">
   {% for post in posts %}
   <li class="post-item">
-    <span class="post-item__date">{{ post.data.date | dateAndMonth }}</span>
+    {% if fullDate %}
+      <span class="post-date">{{ post.data.date | date }}</span>
+    {% else %}
+      <span class="post-date">{{ post.data.date | dateAndMonth }}</span>
+    {% endif %}
     <a href="{{ post.url | url }}">{{ post.data.title }}</a>
   </li>
   {% endfor %}

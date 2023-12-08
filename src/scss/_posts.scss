@@ -15,6 +15,37 @@
   }
 }
 
-.post-item__date {
+.post-date {
   color: #757575;
+}
+
+.post-detail__date {
+  margin-bottom: 0.2em;
+}
+
+.post-detail__author {
+  margin-top: 2em;
+}
+
+.post-detail__tags {
+  margin-top: 0.8em;
+}
+
+.post-author {
+  padding: 0.2em 1em;
+  font-size: 1.1rem;
+  line-height: 1.6em;
+  border-radius: 5px;
+  background-color: rgba(233, 240, 248, 0.55);
+  color: #2969b9;
+}
+
+.post-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  list-style: none;
 }
