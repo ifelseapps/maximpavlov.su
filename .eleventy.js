@@ -117,15 +117,23 @@ module.exports = (config) => {
     return format(value || new Date(), 'dd.MM.yyyy')
   })
 
-  config.addPairedShortcode('quote', (content, author, link) => {
+  config.addPairedShortcode('quote', (content, author, position, link) => {
     const authorHtml = author
-      ? `<footer class="blockquote__footer"><a href="${link}">${author}</a></footer>`
+      ? `<footer class="blockquote__footer">${
+          link ? `<a href="${link}">${author}</a>` : author
+        }${position ? `, ${position}` : ''}</footer>`
       : ''
     return `
       <blockquote class="blockquote">
         ${content.trim()}
         ${authorHtml}
       </blockquote>
+    `
+  })
+
+  config.addPairedShortcode('note', (content) => {
+    return `
+      <div class="note">${content}</div>
     `
   })
 

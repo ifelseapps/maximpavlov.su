@@ -72,7 +72,7 @@ a {
 .page__content h3 {
   margin: 0 0 0.6em 0;
   font-weight: 700;
-  line-height: 1.4em;
+  line-height: 1.2em;
 }
 
 .page__content h1 {
@@ -81,6 +81,13 @@ a {
 
 .page__content h2 {
   font-size: 1.6rem;
+}
+
+.page__content h2,
+.page__content h3 {
+  &:not(:first-child) {
+    margin-top: 1.5em;
+  }
 }
 
 p {
@@ -94,6 +101,7 @@ p {
 .page__content img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .blockquote {
@@ -101,6 +109,7 @@ p {
   padding: 0.5em 3em 0.5em 1em;
   border-left: solid 4px;
   font-size: 1.4rem;
+  line-height: 1.5em;
   font-style: italic;
 }
 
@@ -109,9 +118,9 @@ p {
 }
 
 .blockquote__footer {
+  text-align: right;
   font-size: 1rem;
   font-style: normal;
-  padding-left: 2em;
 }
 
 .figure {
@@ -135,4 +144,23 @@ hr {
 .tag-count {
   font-size: 0.9rem;
   color: #757575;
+}
+
+p code,
+li code,
+figure code {
+  padding: 0.1em 0.2em;
+  background-color: rgba(233, 240, 248, 0.55);
+  color: #2969b9;
+}
+
+.note {
+  margin: 1em 0;
+  padding: 1em 2em;
+  background-color: rgba(233, 240, 248, 0.55);
+  color: #2969b9;
+}
+
+p:empty {
+  display: none;
 }
