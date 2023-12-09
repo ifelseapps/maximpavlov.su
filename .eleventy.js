@@ -5,6 +5,7 @@ const markdownItAnchor = require('markdown-it-anchor')
 const markdownItAttrs = require('markdown-it-attrs')
 const markdownItFootnote = require('markdown-it-footnote')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const embedEverything = require('eleventy-plugin-embed-everything')
 const Image = require('@11ty/eleventy-img')
 const { format } = require('date-fns')
 
@@ -40,6 +41,8 @@ module.exports = (config) => {
 
   config.addPlugin(syntaxHighlight)
 
+  config.addPlugin(embedEverything)
+
   const md = markdownIt({
     html: true,
     linkify: true,
@@ -48,7 +51,7 @@ module.exports = (config) => {
     .use(markdownItAttrs)
     .use(markdownItFootnote)
     .use(markdownItAnchor, {
-      permalink: markdownItAnchor.permalink.headerLink(),
+      permalink: markdownItAnchor.permalink.linkInsideHeader(),
       level: 2,
     })
 
