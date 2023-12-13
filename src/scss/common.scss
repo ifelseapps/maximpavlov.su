@@ -163,6 +163,11 @@ figure code {
   color: #2969b9;
 }
 
+pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
 mark {
   background-color: #e3f2fd;
 }
