@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'layout';
 @import 'posts';
+@import 'cv';
 @import 'prism';
 
 html,
@@ -158,7 +159,7 @@ p code,
 li code,
 figure code {
   padding: 0.1em 0.2em;
-  background-color: rgba(233, 240, 248, 0.55);
+  background-color: #e9f0f8;
   color: #2969b9;
 }
 
@@ -169,10 +170,98 @@ mark {
 .note {
   margin: 1em 0;
   padding: 1em 2em;
-  background-color: rgba(233, 240, 248, 0.55);
+  background-color: #e9f0f8;
   color: #2969b9;
 }
 
 p:empty {
   display: none;
+}
+
+.techs {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  list-style: none;
+  font-size: 0.8rem;
+  line-height: 1em;
+}
+
+.techs__item {
+  padding: 0.4em 0.6em;
+  border: solid 1px #bdbdbd;
+  border-radius: 5px;
+  color: #757575;
+}
+
+.properties {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.properties__property {
+  &:not(:last-child) {
+    margin-bottom: 0.6em;
+  }
+  @include media(lg) {
+    position: relative;
+    display: inline-flex;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      border-bottom: dotted 1px #757575;
+    }
+  }
+}
+
+.properties__title {
+  margin-bottom: 0.2em;
+  font-weight: 700;
+  @include media(lg) {
+    width: 300px;
+    margin-bottom: 0;
+  }
+}
+
+.properties__title-wrapper {
+  @include media(lg) {
+    position: relative;
+    display: inline-block;
+    padding-right: 0.1em;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #e9f0f8;
+      z-index: 1;
+    }
+  }
+}
+
+.properties__value {
+  font-style: italic;
+  @include media(lg) {
+    position: relative;
+    padding-left: 0.1em;
+    flex: auto;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #e9f0f8;
+      z-index: 1;
+    }
+  }
 }

@@ -1,0 +1,82 @@
+.timeline {
+  border-left: 1px solid #9e9e9e;
+  list-style: none;
+  margin: 0;
+  padding: 1em 0;
+  position: relative;
+  width: 100%;
+}
+
+.timeline__description {
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding: 0.2em 0.6em;
+  border-radius: 5px;
+  color: #757575;
+  background-color: #ffecb3;
+  font-style: italic;
+}
+
+.timeline__item {
+  padding: 0 2em;
+  position: relative;
+}
+
+.timeline__item:not(:last-child) {
+  margin-bottom: 3em;
+}
+
+.timeline__item:after,
+.timeline__item:before {
+  border-radius: 100%;
+  content: '';
+  left: -0.5px;
+  position: absolute;
+  top: 0.9rem;
+  transform: translate(-50%, -50%);
+}
+
+.timeline__item:before {
+  background: #424242;
+  height: 8px;
+  width: 8px;
+  z-index: 1;
+}
+
+.timeline__item:after {
+  background: #fff;
+  border: 2px solid #424242;
+  box-sizing: border-box;
+  height: 16px;
+  width: 16px;
+}
+
+.timeline__item_key:before {
+  background: #05c;
+}
+
+.timeline__item_key:after {
+  border-color: #05c;
+}
+
+.timeline-item__period {
+  font-size: 0.9rem;
+  color: #757575;
+}
+
+.timeline-item__title {
+  margin: 0.4em 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.timeline-item__details {
+  margin-top: 1.5em;
+}
+
+.cv-page .note {
+  display: inline-flex;
+  flex-direction: column;
+}

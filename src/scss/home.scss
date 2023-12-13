@@ -18,21 +18,3 @@
     margin-bottom: 2em;
   }
 }
-
-.techs {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6em;
-  list-style: none;
-  font-size: 0.8rem;
-  line-height: 1em;
-}
-
-.techs__item {
-  padding: 0.4em 0.6em;
-  border: solid 1px #bdbdbd;
-  border-radius: 5px;
-  color: #757575;
-}
