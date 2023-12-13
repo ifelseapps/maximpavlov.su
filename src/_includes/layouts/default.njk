@@ -20,7 +20,7 @@
             <nav class="menu">
               <a class="menu__item{{ " menu__item_selected" if '/notes/' in page.url }}" href="/notes/{{ collections.notesByYear | objectKeys | first }}/">Заметки</a>
               <a class="menu__item{{ " menu__item_selected" if '/tags/' in page.url }}" href="/tags/">Теги</a>
-              <a href="#">Проекты</a>
+              <a class="menu__item{{ " menu__item_selected" if '/projects/' in page.url }}" href="/projects/">Проекты</a>
             </nav>
           </div>
         </header>
