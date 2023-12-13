@@ -6,6 +6,7 @@ const markdownItAttrs = require('markdown-it-attrs')
 const markdownItFootnote = require('markdown-it-footnote')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const embedEverything = require('eleventy-plugin-embed-everything')
+const pluginRss = require('@11ty/eleventy-plugin-rss')
 const Image = require('@11ty/eleventy-img')
 const { format } = require('date-fns')
 
@@ -23,6 +24,7 @@ module.exports = (config) => {
   config.addPassthroughCopy('src/assets')
 
   config.addPlugin(rev)
+  config.addPlugin(pluginRss)
   config.addPlugin(sass, {
     compileOptions: {
       permalink: function (contents, inputPath) {
@@ -128,6 +130,18 @@ module.exports = (config) => {
     }
     return [...arr].reverse()
   })
+
+  config.addFilter('dateToRfc3339', pluginRss.dateToRfc3339)
+  config.addFilter('dateToRfc822', pluginRss.dateToRfc822)
+  config.addFilter(
+    'getNewestCollectionItemDate',
+    pluginRss.getNewestCollectionItemDate,
+  )
+  config.addFilter('absoluteUrl', pluginRss.absoluteUrl)
+  config.addFilter(
+    'convertHtmlToAbsoluteUrls',
+    pluginRss.convertHtmlToAbsoluteUrls,
+  )
 
   config.addPairedShortcode('quote', (content, author, position, link) => {
     const authorHtml = author
