@@ -49,6 +49,7 @@ a {
     transition:
       background-color 0.3s,
       text-decoration-color 0.3s;
+    white-space: nowrap;
     &::before {
       position: relative;
       display: inline-block;
@@ -154,8 +155,20 @@ hr {
   color: #757575;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 1em;
+  text-align: left;
+  border: solid 1px #e9f0f8;
+}
+
 p code,
 li code,
+td code,
 figure code {
   padding: 0.1em 0.2em;
   background-color: #e9f0f8;
