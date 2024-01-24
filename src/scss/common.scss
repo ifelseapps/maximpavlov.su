@@ -66,6 +66,11 @@ a {
       text-decoration-color: transparent;
     }
   }
+  &:visited,
+  &:visited:hover {
+    color: #b85ecf;
+    text-decoration-color: #b85ecf66;
+  }
 }
 
 .page__content h1,
@@ -240,8 +245,9 @@ p:empty {
 .properties__title {
   margin-bottom: 0.2em;
   font-weight: 700;
-  @include media(lg) {
-    width: 300px;
+  @include media(md) {
+    width: 200px;
+    flex: none;
     margin-bottom: 0;
   }
 }
