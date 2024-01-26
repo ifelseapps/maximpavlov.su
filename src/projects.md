@@ -26,3 +26,12 @@ Jewish history online — это проект с [открытым](https://gith
 {% note %}
 Если Вам тоже интересна тема еврейской истории, то вы можете присоединиться к проекту. Для этого нужно написать мне на [почту](mailto:me@maximpavlov.su) или в [telegram](https://t.me/ifelseapps).
 {% endnote %}
+
+## Разное
+Тут собраны различные ссылки на репозитории моих поделок в разной степени готовности:
+
+* [Моя конфигурация NeoVim](https://github.com/ifelseapps/nvim-config)
+* [Пример приложения на React + Effector](https://github.com/ifelseapps/react-effector-todoapp)
+* [Пример приложения ы SSR на React + Redux](https://github.com/ifelseapps/react-ssr-example)
+* [Пример библиотеки компонентов на Angular](https://github.com/ifelseapps/ng-bricks)
+* [Парсер результатов работы TypeDoc для генерации документации Angular-компонентов](https://github.com/ifelseapps/typedoc-json-angular-parser)
