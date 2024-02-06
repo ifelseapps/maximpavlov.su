@@ -46,30 +46,32 @@ a {
 .page__content a {
   &[href^='http'],
   &[href^='https'] {
-    transition:
-      background-color 0.3s,
-      text-decoration-color 0.3s;
-    &::before {
-      position: relative;
-      display: inline-block;
-      vertical-align: baseline;
-      top: 3px;
-      margin-right: 2px;
-      content: url(/assets/images/external.svg);
-      width: 1em;
-      height: 1em;
+    &:not(.button) {
+      transition:
+        background-color 0.3s,
+        text-decoration-color 0.3s;
+      &::before {
+        position: relative;
+        display: inline-block;
+        vertical-align: baseline;
+        top: 3px;
+        margin-right: 2px;
+        content: url(/assets/images/external.svg);
+        width: 1em;
+        height: 1em;
+      }
+      &:hover {
+        color: #2962ff;
+        background-color: #ffecb3;
+        text-decoration-color: transparent;
+      }
     }
-    &:hover {
-      color: #2962ff;
-      background-color: #ffecb3;
-      text-decoration-color: transparent;
-    }
-  }
-  &:visited,
-  &:visited:hover {
-    &:not(.menu a) {
-      color: #b85ecf;
-      text-decoration-color: #b85ecf66;
+    &:visited,
+    &:visited:hover {
+      &:not(.menu a):not(.button) {
+        color: #b85ecf;
+        text-decoration-color: #b85ecf66;
+      }
     }
   }
 }
@@ -287,5 +289,21 @@ p:empty {
       background-color: #e9f0f8;
       z-index: 1;
     }
+  }
+}
+
+.button {
+  padding: 0.4em 0.8em;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #00c853;
+  color: inherit;
+  transition: 0.3s background-color;
+  &:hover,
+  &:visited {
+    color: inherit;
+  }
+  &:hover {
+    background-color: #00e676;
   }
 }
