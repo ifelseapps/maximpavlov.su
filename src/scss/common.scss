@@ -66,12 +66,12 @@ a {
         text-decoration-color: transparent;
       }
     }
-    &:visited,
-    &:visited:hover {
-      &:not(.menu a):not(.button) {
-        color: #b85ecf;
-        text-decoration-color: #b85ecf66;
-      }
+  }
+  &:visited,
+  &:visited:hover {
+    &:not(.menu a):not(.button) {
+      color: #b85ecf;
+      text-decoration-color: #b85ecf66;
     }
   }
 }
@@ -296,7 +296,7 @@ p:empty {
   padding: 0.4em 0.8em;
   text-decoration: none;
   border-radius: 5px;
-  background-color: #00c853;
+  background-color: #00e676;
   color: inherit;
   transition: 0.3s background-color;
   &:hover,
@@ -304,6 +304,6 @@ p:empty {
     color: inherit;
   }
   &:hover {
-    background-color: #00e676;
+    background-color: #00c853;
   }
 }
