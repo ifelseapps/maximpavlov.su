@@ -24,7 +24,7 @@ permalink: /projects/
 Jewish history online — это проект с [открытым](https://github.com/ifelseapps/jewishhistory.online) исходным кодом.
 
 {% note %}
-Если Вам тоже интересна тема еврейской истории, то вы можете присоединиться к проекту. Для этого нужно написать мне на [почту](mailto:me@maximpavlov.su) или в [telegram](https://t.me/ifelseapps).
+Если Вам тоже интересна тема еврейской истории, то вы можете присоединиться к проекту. Для этого нужно написать мне на [почту](mailto:ifelseapps@gmail.com) или в [telegram](https://t.me/ifelseapps).
 {% endnote %}
 
 ## Разное
