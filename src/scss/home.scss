@@ -1,6 +1,12 @@
 @import 'mixins';
 
 .home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.home-page__common {
   @include media(xl) {
     display: flex;
     gap: 2em;
@@ -28,4 +34,39 @@
 .channel-banner__subscribe {
   display: flex;
   margin-top: 0.5em;
+}
+
+.reviews {
+  font-size: 1.4rem;
+  @include media(md) {
+    font-size: 1.8rem;
+  }
+  @include media(lg) {
+    font-size: 2rem;
+  }
+}
+
+.reviews__items {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 3em;
+}
+
+.review {
+  font-size: 1.2rem;
+  @include media(md) {
+    font-size: 1.4rem;
+  }
+  @include media(lg) {
+    font-size: 1.6rem;
+  }
+}
+
+.page__content .review__name {
+  margin-bottom: 0.2em;
+}
+
+.review__role {
+  color: #757575;
 }

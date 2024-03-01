@@ -16,6 +16,12 @@ body {
   font-family: 'PTSans', sans-serif;
   font-size: 16px;
   line-height: 1.5em;
+  @include media(md) {
+    font-size: 18px;
+  }
+  @include media(lg) {
+    font-size: 20px;
+  }
 }
 
 .visually-hidden {
@@ -78,26 +84,32 @@ a {
 
 .page__content h1,
 .page__content h2,
-.page__content h3 {
+.page__content h3,
+.page__content .h {
   margin: 0 0 0.6em 0;
   font-weight: 700;
   line-height: 1.2em;
 }
 
-.page__content h1 {
-  font-size: 3rem;
-}
-
-.page__content h2 {
-  font-size: 1.6rem;
-}
-
-.page__content h3 {
-  font-size: 1.2rem;
+.page__content h1,
+.page__content .h_lvl_1 {
+  font-size: 3em;
 }
 
 .page__content h2,
-.page__content h3 {
+.page__content .h_lvl_2 {
+  font-size: 1.6em;
+}
+
+.page__content h3,
+.page__content .h_lvl_3 {
+  font-size: 1.2em;
+}
+
+.page__content h2,
+.page__content h3,
+.page__content .h_lvl_2,
+.page__content .h_lvl_3 {
   &:not(:first-child) {
     margin-top: 1.5em;
   }
@@ -107,6 +119,7 @@ p {
   margin: 0;
   &:not([class]) {
     margin: 1em 0;
+    line-height: 1.4em;
   }
 }
 
@@ -249,7 +262,7 @@ p:empty {
   margin-bottom: 0.2em;
   font-weight: 700;
   @include media(md) {
-    width: 200px;
+    width: 300px;
     flex: none;
     margin-bottom: 0;
   }
