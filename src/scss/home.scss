@@ -6,6 +6,10 @@
   gap: 4em;
 }
 
+.home-page__intro {
+  font-size: 1.2em;
+}
+
 .home-page__common {
   @include media(xl) {
     display: flex;
