@@ -131,6 +131,10 @@ p {
   }
 }
 
+ul li::marker {
+  color: #00e676;
+}
+
 .image,
 .page__content img {
   display: block;
@@ -210,7 +214,7 @@ pre code {
 }
 
 mark {
-  background-color: #e3f2fd;
+  background-color: #ffecb3;
 }
 
 .note {
