@@ -72,7 +72,7 @@
             <nav class="menu">
               <a class="menu__item{{ " menu__item_selected" if '/notes/' in page.url }}" href="/notes/{{ collections.notesByYear | objectKeys | first }}/">Заметки</a>
               <a class="menu__item{{ " menu__item_selected" if '/tags/' in page.url }}" href="/tags/">Теги</a>
-              <a class="menu__item{{ " menu__item_selected" if '/projects/' in page.url }}" href="/projects/">Проекты</a>
+              <a class="menu__item menu__item_more" href="#more">Еще...</a>
             </nav>
           </div>
         </header>
@@ -86,6 +86,23 @@
         </main>
       </div>
       <footer class="footer container page__footer">
+        <div class="more footer__more">
+          <h1 class="h h_lvl_3" id="more">Больше информации</h1>
+          <ul class="more__items">
+            <li class="more-item">
+              <a href="/cv/">Резюме</a>
+              <p class="more-item__desc">
+                Узнайте больше о моем опыте работы, списке применяемых технологий и навыках
+              </p>
+            </li>
+            <li class="more-item">
+              <a href="/projects/">Проекты</a>
+              <p class="more-item__desc">
+                Список моих личных проектов и наработок
+              </p>
+            </li>
+          </ul>
+        </div>
         <div class="menu">
           <a href="mailto:ifelseapps@gmail.com">Электропочта</a>
           <a href="/rss.xml">Rss</a>

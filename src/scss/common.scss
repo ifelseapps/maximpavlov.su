@@ -82,34 +82,42 @@ a {
   }
 }
 
-.page__content h1,
-.page__content h2,
-.page__content h3,
-.page__content .h {
+h1,
+h2,
+h3,
+h4,
+.h {
   margin: 0 0 0.6em 0;
   font-weight: 700;
   line-height: 1.2em;
 }
 
-.page__content h1,
-.page__content .h_lvl_1 {
+h1,
+.h_lvl_1 {
   font-size: 3em;
 }
 
-.page__content h2,
-.page__content .h_lvl_2 {
+h2,
+.h_lvl_2 {
   font-size: 1.6em;
 }
 
-.page__content h3,
-.page__content .h_lvl_3 {
+h3,
+.h_lvl_3 {
   font-size: 1.2em;
 }
 
-.page__content h2,
-.page__content h3,
-.page__content .h_lvl_2,
-.page__content .h_lvl_3 {
+h4,
+.h_lvl_4 {
+  font-size: 1em;
+}
+
+h2,
+h3,
+h4,
+.h_lvl_2,
+.h_lvl_3,
+.h_lvl_4 {
   &:not(:first-child) {
     margin-top: 1.5em;
   }
