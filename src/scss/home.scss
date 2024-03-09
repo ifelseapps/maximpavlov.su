@@ -29,6 +29,13 @@
   }
 }
 
+.home-page__review {
+  margin: 1.5em 0 6em;
+  @include media(md) {
+    margin: 1.5em -1em 6em;
+  }
+}
+
 .subscribe-banner {
   padding: 0.8em 1em;
   border-radius: 5px;
@@ -44,37 +51,22 @@
   margin-top: 0.8em;
 }
 
-.reviews {
-  font-size: 1.4rem;
-  @include media(md) {
-    font-size: 1.8rem;
-  }
-  @include media(lg) {
-    font-size: 2rem;
-  }
+.review-main {
+  padding: 1em;
+  font-size: 1.2em;
+  background-color: #000;
+  color: #fff;
 }
 
-.reviews__items {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  margin-top: 3em;
+.review-main__text {
+  margin: 0.5em 0;
+  line-height: 1.5em;
 }
 
-.review {
-  font-size: 1.2rem;
-  @include media(md) {
-    font-size: 1.4rem;
-  }
-  @include media(lg) {
-    font-size: 1.6rem;
-  }
+.review-main__author {
+  font-size: 0.8em;
 }
 
-.page__content .review__name {
-  margin-bottom: 0.2em;
-}
-
-.review__role {
-  color: #757575;
+.review-main__more {
+  margin-top: 1em;
 }
