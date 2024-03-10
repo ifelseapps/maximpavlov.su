@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .timeline {
   border-left: 1px solid #9e9e9e;
   list-style: none;
@@ -5,18 +7,6 @@
   padding: 1em 0;
   position: relative;
   width: 100%;
-}
-
-.timeline__description {
-  display: inline-block;
-  margin-bottom: 3em;
-  margin-left: 2em;
-  margin-right: 2em;
-  padding: 0.2em 0.6em;
-  border-radius: 5px;
-  color: #757575;
-  background-color: #ffecb3;
-  font-style: italic;
 }
 
 .timeline__item {
@@ -62,13 +52,13 @@
 }
 
 .timeline-item__period {
-  font-size: 0.9rem;
   color: #757575;
 }
 
 .timeline-item__title {
   margin: 0.4em 0;
   font-size: 1.2rem;
+  line-height: 1.4em;
   font-weight: 700;
 }
 
@@ -77,6 +67,9 @@
 }
 
 .cv-page .note {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
+  @include media(lg) {
+    display: inline-flex;
+  }
 }

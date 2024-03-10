@@ -131,8 +131,12 @@ p {
   }
 }
 
-ul li::marker {
+ul:not([class]) li::marker {
   color: #00e676;
+}
+
+ul ul {
+  list-style-type: disc;
 }
 
 .image,
@@ -235,8 +239,9 @@ p:empty {
   flex-wrap: wrap;
   gap: 0.6em;
   list-style: none;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1em;
+  user-select: none;
 }
 
 .techs__item {
@@ -304,6 +309,7 @@ p:empty {
     position: relative;
     padding-left: 0.1em;
     flex: auto;
+    white-space: nowrap;
     &::after {
       content: '';
       position: absolute;
