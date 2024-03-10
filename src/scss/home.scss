@@ -6,10 +6,6 @@
   gap: 4em;
 }
 
-.home-page__intro {
-  font-size: 1.2em;
-}
-
 .home-page__common {
   @include media(xl) {
     display: flex;
@@ -69,4 +65,14 @@
 
 .review-main__more {
   margin-top: 1em;
+}
+
+.home-page-intro {
+  @include media(md) {
+    font-size: 1.2em;
+  }
+}
+
+.home-page-intro__title {
+  line-height: 1em;
 }
