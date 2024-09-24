@@ -33,18 +33,12 @@
 }
 
 .subscribe-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
   padding: 0.8em 1em;
   border-radius: 5px;
   background-color: #ffecb3;
-}
-
-.subscribe-banner__channel-btn {
-  display: flex;
-  margin-top: 0.5em;
-}
-
-.subscribe-banner__rss {
-  margin-top: 0.8em;
 }
 
 .review-main {
