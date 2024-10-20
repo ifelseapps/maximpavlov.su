@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/cv/"
+  to = "/frontend/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/reviews/"
+  to = "/frontend/"
+  status = 301
+  force = false

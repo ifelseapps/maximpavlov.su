@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/frontend.njk",
+  "headerMod": "header_filled page__header_filled"
+}

@@ -63,17 +63,26 @@
   <body>
     <div class="page">
       <div>
-        <header class="header container page__header">
-          <a class="header__name" href="/">
-            Максим Павлов
-            <span class="header__profession">&mdash;&nbsp;frontend engineer</span>
-          </a>
-          <div class="header__menu">
-            <nav class="menu">
-              <a class="menu__item{{ " menu__item_selected" if '/notes/' in page.url }}" href="/notes/{{ collections.notesByYear | objectKeys | first }}/">Заметки</a>
-              <a class="menu__item{{ " menu__item_selected" if '/tags/' in page.url }}" href="/tags/">Теги</a>
-              <a class="menu__item menu__item_more" href="#more">Еще...</a>
-            </nav>
+        {% set mod = '' %}
+        {% if headerMod %}
+          {% set mod = [' ', headerMod] | join %}
+        {% endif %}
+        <header class="header page__header{{ mod }}">
+          <div class="container header__inner">
+            <a class="header__name" href="/">
+              Максим Павлов
+            </a>
+            <div class="header__menu">
+              <nav class="menu">
+                <a class="menu__item{{ " menu__item_selected" if '/about/' in page.url }}" href="/about/">Обо мне</a>
+                <a class="menu__item menu__item_frontend{{ " menu__item_selected" if '/frontend/' in page.url }}" href="/frontend/">Frontend-разработка</a>
+                <a class="menu__item{{ " menu__item_selected" if '/notes/' in page.url }}" href="/notes/{{ collections.notesByYear | objectKeys | first }}/">Заметки</a>
+                <a class="menu__item{{ " menu__item_selected" if '/tags/' in page.url }}" href="/tags/">Рубрики</a>
+                <a class="menu__item{{ " menu__item_selected" if '/archive/' in page.url }}" href="/archive/">Архив</a>
+              </nav>
+            </div>
+            {% block header_intro %}
+            {% endblock header_intro %}
           </div>
         </header>
         <main class="container page__content">
@@ -85,43 +94,16 @@
           {% endblock content %}
         </main>
       </div>
-      <footer class="footer container page__footer">
-        <div class="more footer__more">
-          <h1 class="h h_lvl_3" id="more">Больше информации</h1>
-          <ul class="more__items">
-            <li class="more-item">
-              <a href="/cv/">Резюме</a>
-              <p class="more-item__desc">
-                Узнайте больше о моем опыте работы, списке применяемых технологий и навыках
-              </p>
-            </li>
-            <li class="more-item">
-              <a href="/reviews/">Отзывы</a>
-              <p class="more-item__desc">
-                Мои коллеги из разных компаний делятся опытом работы со мной
-              </p>
-            </li>
-            <li class="more-item">
-              <a href="/philosophy/">Философия</a>
-              <p class="more-item__desc">
-                О моем подходе к жизни и работе
-              </p>
-            </li>
-            <li class="more-item">
-              <a href="/projects/">Проекты</a>
-              <p class="more-item__desc">
-                Список моих личных проектов и наработок
-              </p>
-            </li>
-          </ul>
+      <footer class="container page__footer">
+        <div class="footer">
+          <div class="menu">
+            <a href="mailto:ifelseapps@gmail.com">Электропочта</a>
+            <a href="/rss.xml">Rss</a>
+            <a href="https://t.me/ifelseapps">Телеграмм</a>
+            <a href="https://github.com/ifelseapps">Github</a>
+          </div>
+          <p class="footer__copyright">&copy;&nbsp;2014+ Максим Павлов</p>
         </div>
-        <div class="menu">
-          <a href="mailto:ifelseapps@gmail.com">Электропочта</a>
-          <a href="/rss.xml">Rss</a>
-          <a href="https://t.me/ifelseapps">Телеграмм</a>
-          <a href="https://github.com/ifelseapps">Github</a>
-        </div>
-        <p class="footer__copyright">&copy;&nbsp;2014+ Максим Павлов</p>
       </footer>
     </div>
   </body>
