@@ -10,6 +10,7 @@ const embedEverything = require('eleventy-plugin-embed-everything')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const Image = require('@11ty/eleventy-img')
 const { format } = require('date-fns')
+const layeringCollection = require('./src/11ty/collections/tagsWithPagination')
 
 /** @param {import("@11ty/eleventy").UserConfig} config */
 module.exports = (config) => {
@@ -112,6 +113,13 @@ module.exports = (config) => {
 
     return { groups, letters: Object.keys(groups).sort() }
   })
+
+  config.addCollection('tagsWithPagination', (api) =>
+    layeringCollection(api, {
+      collectionAPI: api.getFilteredByGlob('src/notes/**/*.md'),
+      size: 2,
+    }),
+  )
 
   /** @todo Дать более релевантное название */
   config.addFilter('objectKeys', (value) => {

@@ -19,6 +19,7 @@
     "eleventy-plugin-embed-everything": "^1.17.0",
     "eleventy-plugin-rev": "^1.1.1",
     "eleventy-sass": "^2.2.3",
+    "lodash.chunk": "^4.2.0",
     "markdown-it": "^13.0.2",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-attrs": "^4.1.6",

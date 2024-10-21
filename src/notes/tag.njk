@@ -1,16 +1,21 @@
 ---
 layout: layouts/default.njk
 pagination:
-  data: collections
+  data: collections.tagsWithPagination
   size: 1
   alias: tag
-  filter:
-    - note
-permalink: /tags/{{ tag }}/
+permalink: tags/{{ tag.tagName }}/{{ (tag.pageNumber + 1) + "/" if tag.pageNumber }}
 eleventyComputed:
-  keywords: '{{ tag }}'
-  title: '{{ tag | capitalize }}'
+  keywords: '{{ tag.tagName }}'
+  title: '{{ tag.tagName | capitalize }}'
 ---
 
 {% import "_posts.njk" as posts %}
-{{ posts.list((collections[tag] | reverse), true) }}
+{{ posts.list((tag.templateObjets | reverse), true) }}
+
+{% if tag.total > 1 %}
+  <ul>
+    <li>{% if tag.previous %}<a href="{{ tag.previous }}">Назад</a>{% else %}Назад{% endif %}</li>
+    <li>{% if tag.next %}<a href="{{ tag.next }}">Вперед</a>{% else %}Вперед{% endif %}</li>
+  </ul>
+{% endif %}
