@@ -9,11 +9,11 @@
   {{ content | safe }}
   <footer>
     {% if tags %}
-      <ul class="post-tags-list post-detail__tags">
+      <ul class="tags-list post-detail__tags">
         {% for tag in tags %}
           {% if tag != 'note' %}
             <li>
-              <a href="/tags/{{ tag }}/">#{{ tag }}</a>
+              <a class="tag" href="/tags/{{ tag }}/">{{ tag }}</a>
             </li>
           {% endif %}
         {% endfor %}
