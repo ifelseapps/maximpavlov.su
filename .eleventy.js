@@ -104,7 +104,7 @@ module.exports = (config) => {
   config.addCollection('tagsWithPagination', (api) =>
     layeringCollection(api, {
       collectionAPI: api.getFilteredByGlob('src/notes/**/*.md'),
-      size: 2,
+      size: 10,
     }),
   )
 

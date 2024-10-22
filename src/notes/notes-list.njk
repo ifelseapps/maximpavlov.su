@@ -2,7 +2,7 @@
 layout: layouts/default.njk
 pagination:
   data: collections.notes
-  size: 2
+  size: 10
   alias: items
 eleventyExcludeFromCollections: true
 permalink: "{%- if pagination.pageNumber == 0 -%}/notes/{%- else -%}/notes/{{- pagination.pageNumber -}}/{%- endif -%}"
@@ -11,16 +11,18 @@ permalink: "{%- if pagination.pageNumber == 0 -%}/notes/{%- else -%}/notes/{{- p
 {% import "_posts.njk" as posts %}
 {{ posts.list(items, true) }}
 
-<div class="pagination">
-  {% if pagination.href.previous %}
-    <a href="{{pagination.href.previous}}">Назад</a>
-  {% else %}
-    <div class="pagination__disabled">Назад</div>
-  {% endif %}
+{% if pagination.href.previous or pagination.href.next %}
+  <div class="pagination">
+    {% if pagination.href.previous %}
+      <a href="{{pagination.href.previous}}">Назад</a>
+    {% else %}
+      <div class="pagination__disabled">Назад</div>
+    {% endif %}
 
-  {% if pagination.href.next %}
-    <a href="{{pagination.href.next}}">Вперед</a>
-  {% else %}
-    <div class="pagination__disabled">Вперед</div>
-  {% endif %}
-</div>
+    {% if pagination.href.next %}
+      <a href="{{pagination.href.next}}">Вперед</a>
+    {% else %}
+      <div class="pagination__disabled">Вперед</div>
+    {% endif %}
+  </div>
+{% endif %}
