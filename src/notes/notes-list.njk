@@ -2,7 +2,7 @@
 layout: layouts/default.njk
 pagination:
   data: collections.notes
-  size: 2
+  size: 10
   alias: items
 eleventyExcludeFromCollections: true
 permalink: "{%- if pagination.pageNumber == 0 -%}/notes/{%- else -%}/notes/{{- pagination.pageNumber -}}/{%- endif -%}"
