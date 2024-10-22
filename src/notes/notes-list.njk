@@ -11,9 +11,16 @@ permalink: "{%- if pagination.pageNumber == 0 -%}/notes/{%- else -%}/notes/{{- p
 {% import "_posts.njk" as posts %}
 {{ posts.list(items, true) }}
 
-{% if pagination.href.previous %}
-  <a href="{{pagination.href.previous}}">Назад</a>
-{% endif %}
-{% if pagination.href.next %}
-  <a href="{{pagination.href.next}}">Далее</a>
-{% endif %}
+<div class="pagination">
+  {% if pagination.href.previous %}
+    <a href="{{pagination.href.previous}}">Назад</a>
+  {% else %}
+    <div class="pagination__disabled">Назад</div>
+  {% endif %}
+
+  {% if pagination.href.next %}
+    <a href="{{pagination.href.next}}">Вперед</a>
+  {% else %}
+    <div class="pagination__disabled">Вперед</div>
+  {% endif %}
+</div>

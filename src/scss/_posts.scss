@@ -48,3 +48,13 @@
   padding: 0;
   list-style: none;
 }
+
+.pagination {
+  display: flex;
+  gap: 0.8em;
+  margin-top: 1.5em;
+}
+
+.pagination__disabled {
+  color: #9e9e9e;
+}

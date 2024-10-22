@@ -14,8 +14,17 @@ eleventyComputed:
 {{ posts.list((tag.templateObjets | reverse), true) }}
 
 {% if tag.total > 1 %}
-  <ul>
-    <li>{% if tag.previous %}<a href="{{ tag.previous }}">Назад</a>{% else %}Назад{% endif %}</li>
-    <li>{% if tag.next %}<a href="{{ tag.next }}">Вперед</a>{% else %}Вперед{% endif %}</li>
-  </ul>
+  <div class="pagination">
+    {% if tag.previous %}
+      <a href="{{ tag.previous }}">Назад</a>
+    {% else %}
+      <div class="pagination__disabled">Назад</div>
+    {% endif %}
+
+    {% if tag.next %}
+      <a href="{{ tag.next }}">Вперед</a>
+    {% else %}
+      <div class="pagination__disabled">Вперед</div>
+    {% endif %}
+  </div>
 {% endif %}
