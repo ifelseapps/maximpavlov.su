@@ -1,6 +1,7 @@
 ---
 title: Асинхронный груминг
 date: 2023-11-10
+is_favorite: true
 tags:
   - процессы
 ---

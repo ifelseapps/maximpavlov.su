@@ -1,13 +1,18 @@
-{% macro list(posts, fullDate = false) %}
+{% macro list(posts) %}
 <ol class="posts-list">
   {% for post in posts %}
-  <li class="post-item">
-    {% if fullDate %}
-      <span class="post-date">{{ post.data.date | date }}</span>
-    {% else %}
-      <span class="post-date">{{ post.data.date | dateAndMonth }}</span>
-    {% endif %}
-    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+  <li class="post-item{{ " post-item_favorite" if post.data.is_favorite }}">
+    <span class="post-date">{{ post.data.date | date }}</span>
+    <a class="post-item__title" href="{{ post.url | url }}">{{ post.data.title }}</a>
+    <ul class="tags-list">
+      {% for tag in post.data.tags %}
+        {% if tag !== 'note' %}
+          <li>
+            <a class="tag" href="/tags/{{ tag }}/">{{ tag }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
   </li>
   {% endfor %}
 </ol>
