@@ -8,11 +8,13 @@ permalink: /tags/
   {% for letter in collections.tagsByFirstLetter.letters %}
     <div class="tags-index-item tags-index__item">
       <h2 class="h h_lvl_3 tags-index-item__letter">{{ letter | upper }}</h2>
-      <ul class="tags-index-item__tags">
+      <ul class="tags-list tags-index-item__tags">
         {% for tag in collections.tagsByFirstLetter.groups[letter] %}
           <li>
-            <a href="/tags/{{ tag.name }}/">{{ tag.name }}</a>
-            <span class="tag-count">({{ tag.count }})</span>
+            <a class="tag" href="/tags/{{ tag.name }}/">
+              {{ tag.name }}
+              <span class="tag__count">{{ tag.count }}</span>
+            </a>
           </li>
         {% endfor %}
       </ul>
