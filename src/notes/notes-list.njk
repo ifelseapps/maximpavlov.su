@@ -1,0 +1,19 @@
+---
+layout: layouts/default.njk
+pagination:
+  data: collections.notes
+  size: 2
+  alias: items
+eleventyExcludeFromCollections: true
+permalink: "{%- if pagination.pageNumber == 0 -%}/notes/{%- else -%}/notes/{{- pagination.pageNumber -}}/{%- endif -%}"
+---
+
+{% import "_posts.njk" as posts %}
+{{ posts.list(items, true) }}
+
+{% if pagination.href.previous %}
+  <a href="{{pagination.href.previous}}">Назад</a>
+{% endif %}
+{% if pagination.href.next %}
+  <a href="{{pagination.href.next}}">Далее</a>
+{% endif %}

@@ -62,19 +62,6 @@ module.exports = (config) => {
 
   config.setLibrary('md', md)
 
-  config.addCollection('notesByYear', (api) => {
-    const notes = api.getFilteredByGlob('src/notes/**/*.md').reverse()
-    const groups = {}
-
-    for (const note of notes) {
-      const year = note.data.date.getFullYear()
-      groups[year] = groups[year] || []
-      groups[year].push(note)
-    }
-
-    return groups
-  })
-
   config.addCollection('tagsByFirstLetter', (api) => {
     let tagSet = new Set()
     const count = {}
@@ -119,6 +106,10 @@ module.exports = (config) => {
       collectionAPI: api.getFilteredByGlob('src/notes/**/*.md'),
       size: 2,
     }),
+  )
+
+  config.addCollection('notes', (api) =>
+    api.getFilteredByGlob('src/notes/**/*.md').reverse(),
   )
 
   /** @todo Дать более релевантное название */
