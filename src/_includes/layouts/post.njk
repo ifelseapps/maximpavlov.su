@@ -13,7 +13,10 @@
         {% for tag in tags %}
           {% if tag != 'note' %}
             <li>
-              <a class="tag" href="/tags/{{ tag }}/">{{ tag }}</a>
+              <a class="tag" href="/tags/{{ tag }}/">
+                {{ tag }}
+                <span class="tag__count">{{ collections.tagsByFirstLetter.count[tag|lower] }}</span>
+              </a>
             </li>
           {% endif %}
         {% endfor %}

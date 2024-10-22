@@ -11,7 +11,7 @@ eleventyComputed:
 ---
 
 {% import "_posts.njk" as posts %}
-{{ posts.list((tag.templateObjets | reverse)) }}
+{{ posts.list((tag.templateObjets | reverse), collections.tagsByFirstLetter.count) }}
 
 {% if tag.total > 1 %}
   <div class="pagination">

@@ -1,4 +1,4 @@
-{% macro list(posts) %}
+{% macro list(posts, count) %}
 <ol class="posts-list">
   {% for post in posts %}
   <li class="post-item{{ " post-item_favorite" if post.data.is_favorite }}">
@@ -8,7 +8,10 @@
       {% for tag in post.data.tags %}
         {% if tag !== 'note' and tag !== 'archive' %}
           <li>
-            <a class="tag" href="/tags/{{ tag }}/">{{ tag }}</a>
+            <a class="tag" href="/tags/{{ tag }}/">
+              {{ tag }}
+              <span class="tag__count">{{ count[tag|lower] }}</span>
+            </a>
           </li>
         {% endif %}
       {% endfor %}

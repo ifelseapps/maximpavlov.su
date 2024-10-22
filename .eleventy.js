@@ -99,7 +99,7 @@ module.exports = (config) => {
       return acc
     }, {})
 
-    return { groups, letters: Object.keys(groups).sort() }
+    return { groups, letters: Object.keys(groups).sort(), count }
   })
 
   config.addCollection('tagsWithPagination', (api) =>
