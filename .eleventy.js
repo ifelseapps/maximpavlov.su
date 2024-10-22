@@ -74,6 +74,7 @@ module.exports = (config) => {
         tags = tags.filter(function (item) {
           switch (item) {
             case 'all':
+            case 'archive':
             case 'nav':
             case 'note':
             case 'notes':
