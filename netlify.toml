@@ -9,3 +9,69 @@
   to = "/frontend/"
   status = 301
   force = false
+
+[[redirects]]
+  from = "/notes/2023/"
+  to = "/archive/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/notes/2021/"
+  to = "/archive/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/notes/2020/"
+  to = "/archive/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/notes/2019/"
+  to = "/archive/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/notes/2019/polet-na-aviatrenajere-boeing-737-ng/"
+  to = "/notes/polet-na-aviatrenajere-boeing-737-ng/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/notes/2023/async-grooming/"
+  to = "/archive/async-grooming/"
+  status = 301
+  force = false
+
+  [[redirects]]
+  from = "/notes/2021/ts-practice-generics/"
+  to = "/archive/ts-practice-generics/"
+  status = 301
+  force = false
+
+  [[redirects]]
+  from = "/notes/2021/clean-code-part-2/"
+  to = "/archive/clean-code-part-2/"
+  status = 301
+  force = false
+
+  [[redirects]]
+  from = "/notes/2021/clean-code-part-1/"
+  to = "/archive/clean-code-part-1/"
+  status = 301
+  force = false
+
+  [[redirects]]
+  from = "/notes/2020/describe-the-state-of-the-interface-using-typescript/"
+  to = "/archive/describe-the-state-of-the-interface-using-typescript/"
+  status = 301
+  force = false
+
+  [[redirects]]
+  from = "/notes/2020/creating-a-library-in-typescript/"
+  to = "/archive/creating-a-library-in-typescript/"
+  status = 301
+  force = false

@@ -6,7 +6,7 @@
     <a class="post-item__title" href="{{ post.url | url }}">{{ post.data.title }}</a>
     <ul class="tags-list">
       {% for tag in post.data.tags %}
-        {% if tag !== 'note' %}
+        {% if tag !== 'note' and tag !== 'archive' %}
           <li>
             <a class="tag" href="/tags/{{ tag }}/">{{ tag }}</a>
           </li>

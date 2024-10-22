@@ -1,9 +1,6 @@
 ---
 title: Практика TypeScript. Generics.
 date: 2021-01-28
-tags:
-- typescript
-- generics
 ---
 
 {% quote %}

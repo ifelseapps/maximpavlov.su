@@ -1,0 +1,7 @@
+---
+title: Архив
+eleventyExcludeFromCollections: true
+---
+
+{% import "_posts.njk" as posts %}
+{{ posts.list(collections.archive | reverse) }}
