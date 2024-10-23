@@ -5,6 +5,7 @@ pagination:
   size: 1
   alias: tag
 permalink: tags/{{ tag.tagName }}/{{ (tag.pageNumber + 1) + "/" if tag.pageNumber }}
+eleventyExcludeFromCollections: true
 eleventyComputed:
   keywords: '{{ tag.tagName }}'
   title: '{{ tag.tagName | capitalize }}'
