@@ -40,10 +40,10 @@
 
     {% block custom_head %}
     {% endblock %}
-    <title>{{ title }} :: Максим Павлов, senior frontend engineer</title>
+    <title>{{ title }} — Максим Павлов</title>
 
-    <meta property="og:site_name" content="Максим Павлов — senior frontend engineer"/>
-    <meta property="og:title" content="{{ title }} :: Максим Павлов, senior frontend engineer">
+    <meta property="og:site_name" content="Максим Павлов"/>
+    <meta property="og:title" content="{{ title }} — Максим Павлов">
 
     {% if description %}
       <meta name="description" content="{{ description }}">
@@ -58,9 +58,6 @@
 
     <meta property="og:image" content="https://v1.screenshot.11ty.dev/{{ 'https://maximpavlov.su' | urlencode }}{{ page.url | urlencode }}/opengraph/"/>
     <meta property="og:image:width" content="1200"/>
-
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@ifelseapps"/>
   </head>
   <body>
     <div class="page">
