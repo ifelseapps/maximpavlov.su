@@ -13,9 +13,9 @@
         {% for tag in tags %}
           {% if tag != 'note' %}
             <li>
-              <a class="tag" href="/tags/{{ tag }}/">
+              <a class="tag-item" href="/tags/{{ tag }}/">
                 {{ tag }}
-                <span class="tag__count">{{ collections.tagsByFirstLetter.count[tag|lower] }}</span>
+                <span class="tag-item__count">{{ collections.tagsByFirstLetter.count[tag|lower] }}</span>
               </a>
             </li>
           {% endif %}

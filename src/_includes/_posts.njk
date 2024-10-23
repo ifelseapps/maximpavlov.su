@@ -8,9 +8,9 @@
       {% for tag in post.data.tags %}
         {% if tag !== 'note' and tag !== 'archive' %}
           <li>
-            <a class="tag" href="/tags/{{ tag }}/">
+            <a class="tag-item" href="/tags/{{ tag }}/">
               {{ tag }}
-              <span class="tag__count">{{ count[tag|lower] }}</span>
+              <span class="tag-item__count">{{ count[tag|lower] }}</span>
             </a>
           </li>
         {% endif %}

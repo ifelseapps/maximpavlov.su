@@ -110,7 +110,7 @@
   padding: 0;
 }
 
-.tag {
+.tag-item {
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
@@ -126,7 +126,7 @@
   }
 }
 
-.tag__count {
+.tag-item__count {
   display: flex;
   align-items: center;
   justify-content: center;

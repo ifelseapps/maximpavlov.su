@@ -11,9 +11,9 @@ permalink: /tags/
       <ul class="tags-list tags-index-item__tags">
         {% for tag in collections.tagsByFirstLetter.groups[letter] %}
           <li>
-            <a class="tag" href="/tags/{{ tag.name }}/">
+            <a class="tag-item" href="/tags/{{ tag.name }}/">
               {{ tag.name }}
-              <span class="tag__count">{{ tag.count }}</span>
+              <span class="tag-item__count">{{ tag.count }}</span>
             </a>
           </li>
         {% endfor %}
