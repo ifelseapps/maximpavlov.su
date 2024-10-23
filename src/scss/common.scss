@@ -158,10 +158,12 @@ ul ul {
 .blockquote {
   margin: 1em 0;
   padding: 0.5em 3em 0.5em 1em;
-  border-left: solid 4px;
+  border-left: solid 4px #ffea00;
   font-size: 1.4rem;
   line-height: 1.5em;
   font-style: italic;
+  background-color: #fffde7;
+  color: #4e342e;
 }
 
 .blockquote p {
