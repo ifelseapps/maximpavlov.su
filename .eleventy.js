@@ -4,6 +4,7 @@ const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 const markdownItAttrs = require('markdown-it-attrs')
 const markdownItFootnote = require('markdown-it-footnote')
+const markdownItMark = require('markdown-it-mark')
 const markdownItMultiMdTable = require('markdown-it-multimd-table')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const embedEverything = require('eleventy-plugin-embed-everything')
@@ -55,6 +56,7 @@ module.exports = (config) => {
     .use(markdownItAttrs)
     .use(markdownItFootnote)
     .use(markdownItMultiMdTable)
+    .use(markdownItMark)
     .use(markdownItAnchor, {
       permalink: markdownItAnchor.permalink.linkInsideHeader(),
       level: 2,
