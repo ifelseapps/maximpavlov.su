@@ -1,0 +1,25 @@
+---
+title: Страница не найдена
+layout: layouts/error.njk
+permalink: 404.html
+---
+
+<div class="error-404">
+  <div class="error-404__picture">
+    {% image 'src/assets/images/404.jpg', '' %}
+  </div>
+  <div>
+    <h1 class="h h_lvl_1 error-404__title">Страница не найдена</h1>
+    <div>Такой страницы на сайте нет, но есть много других:</div>
+  </div>
+  <nav class="menu">
+    <a class="menu__item" href="/about/">Обо мне</a>
+    <a class="menu__item menu__item_frontend" href="/frontend/">Frontend-разработка</a>
+    <a class="menu__item" href="/notes/">Заметки</a>
+    <a class="menu__item" href="/tags/">Теги</a>
+    <a class="menu__item" href="/archive/">Архив</a>
+  </nav>
+  <div class="error-404__go-to-main">
+    <a class="button" href="/">Вернуться на главную</a>
+  </div>
+</div>
