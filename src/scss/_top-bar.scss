@@ -4,6 +4,11 @@
   color: #424242;
 }
 
+.top-bar_landing {
+  background-color: rgba(#000, 0.82);
+  color: #fff;
+}
+
 .top-bar__inner {
   display: flex;
   gap: 2em;
@@ -24,6 +29,15 @@
     border-radius: 100%;
     background-color: #616161;
   }
+}
+
+.top-bar_landing .top-bar__item::after {
+  background-color: #eeeeee;
+}
+
+.top-bar_landing .top-bar__item:not(.top-bar__item_current) {
+  color: #81d4fa;
+  text-decoration-color: rgba(#01579b, 0.6);
 }
 
 .top-bar__item_current {

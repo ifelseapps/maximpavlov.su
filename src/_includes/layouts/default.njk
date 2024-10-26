@@ -62,7 +62,11 @@
   <body>
     <div class="page">
       <div>
-        <aside class="top-bar">
+        {% set mod = '' %}
+        {% if topBarMod %}
+          {% set mod = [' ', topBarMod] | join %}
+        {% endif %}
+        <aside class="top-bar{{ mod }}">
           <div class="container top-bar__inner">
             <div class="top-bar__item top-bar__item_current">Максим Павлов</div>
             <a class="top-bar__item" href="https://maximisdriving.com">«Максим рулит»</a>
