@@ -141,4 +141,9 @@
   font-size: 0.8em;
   border-radius: 100%;
   background-color: #ff8f00;
+  transition: background-color 0.3s;
+}
+
+.tag-item:hover .tag-item__count {
+  background-color: #ffb300;
 }
