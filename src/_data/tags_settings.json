@@ -1,7 +1,8 @@
 {
   "main_page": [
     {
-      "name": "фридайвинг"
+      "name": "фридайвинг",
+      "is_favorite": true
     },
     {
       "name": "книги"

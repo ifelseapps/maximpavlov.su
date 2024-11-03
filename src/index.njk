@@ -16,7 +16,7 @@ hide_h1: true
     <ul class="main-page-notes">
       {% for tag in tags_settings.main_page %}
         {% if collections[tag.name | lower] | length %}
-          <li class="main-page-notes__tag">
+          <li class="main-page-notes__tag{{ " main-page-notes__tag_favorite" if tag.is_favorite }}">
             <h3 class="h h_lvl_4">
               Заметки по тегу <a href="/tags/{{ tag.name }}">&laquo;{{ tag.name | capitalize }}&raquo;</a>
             </h3>
