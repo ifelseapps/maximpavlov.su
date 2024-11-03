@@ -157,3 +157,20 @@
 .error-404__go-to-main {
   margin-top: 2em;
 }
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.main-page__title {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0 0 1em;
+}
+
+.main-page__about {
+  max-width: 650px;
+  font-size: 1.3rem;
+}
