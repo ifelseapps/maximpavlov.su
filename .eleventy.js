@@ -1,4 +1,3 @@
-const sass = require('eleventy-sass')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 const markdownItAttrs = require('markdown-it-attrs')
@@ -25,21 +24,6 @@ module.exports = (config) => {
   config.addPassthroughCopy('src/assets')
 
   config.addPlugin(pluginRss)
-  config.addPlugin(sass, {
-    compileOptions: {
-      permalink: function (contents, inputPath) {
-        return (data) =>
-          data.page.filePathStem.replace(/^\/scss\//, '/css/') + '.css'
-      },
-    },
-    sass: {
-      style: 'compressed',
-      sourceMap: false,
-      loadPaths: ['src/_includes/scss'],
-      includes: 'src/_includes/scss',
-    },
-    rev: false,
-  })
 
   config.addPlugin(syntaxHighlight)
 

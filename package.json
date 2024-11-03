@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx --node-options='--experimental-require-module' @11ty/eleventy --serve --incremental",
-    "build": "rimraf _site && rimraf .cache && npx --node-options='--experimental-require-module' @11ty/eleventy"
+    "start": "npx @11ty/eleventy --serve --incremental",
+    "build:css": "sass --quiet --style=compressed --no-source-map --load-path=src/_includes/scss src/scss/common.scss _site/css/common.css",
+    "build": "rimraf _site && rimraf .cache && npm run build:css && npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,6 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "date-fns": "^2.30.0",
     "dotenv": "^16.4.5",
-    "eleventy-sass": "^3.0.0-beta.0",
     "lodash.chunk": "^4.2.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
@@ -26,6 +26,7 @@
     "markdown-it-mark": "^4.0.0",
     "markdown-it-multimd-table": "^4.2.3",
     "prettier": "^3.0.3",
-    "rimraf": "^5.0.5"
+    "rimraf": "^5.0.5",
+    "sass": "^1.80.6"
   }
 }
