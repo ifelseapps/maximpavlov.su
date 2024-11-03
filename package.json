@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npx @11ty/eleventy --serve --incremental",
     "build:css": "sass --quiet --style=compressed --no-source-map --load-path=src/_includes/scss src/scss/common.scss _site/css/common.css",
+    "build:css:watch": "sass --quiet --style=compressed --no-source-map --load-path=src/_includes/scss --watch src/scss/common.scss _site/css/common.css",
     "build": "rimraf _site && rimraf .cache && npm run build:css && npx @11ty/eleventy"
   },
   "keywords": [],
