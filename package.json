@@ -28,6 +28,7 @@
     "markdown-it-multimd-table": "^4.2.3",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
-    "sass": "^1.80.6"
+    "sass": "^1.80.6",
+    "strict-uri-encode": "^2.0.0"
   }
 }

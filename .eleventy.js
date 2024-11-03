@@ -8,6 +8,7 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const Image = require('@11ty/eleventy-img')
 const { format } = require('date-fns')
+const encodeUri = require('strict-uri-encode')
 const layeringCollection = require('./src/11ty/collections/tagsWithPagination')
 
 /** @param {import("@11ty/eleventy").UserConfig} config */
@@ -174,6 +175,12 @@ module.exports = (config) => {
       return Image.generateHTML(metadata, imageAttributes)
     },
   )
+
+  config.addShortcode('header', (title, level = '2') => {
+    const tag = `h${level}`
+    const encoded = encodeUri(title)
+    return `<${tag} id=${encoded} class="h h_lvl_${level}" tabindex="-1">${title} <a class="header-anchor" href="#${encoded}">#</a></${tag}>`
+  })
 
   return {
     dir: {
