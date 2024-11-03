@@ -78,8 +78,8 @@ a {
   &:visited,
   &:visited:hover {
     &:not(.menu a):not(.button) {
-      color: #b85ecf;
-      text-decoration-color: #b85ecf66;
+      color: rgb(92, 138, 201);
+      text-decoration-color: rgba(92, 138, 201, 0.2);
     }
   }
 }
