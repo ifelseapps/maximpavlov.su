@@ -1,5 +1,4 @@
 const sass = require('eleventy-sass')
-const rev = require('eleventy-plugin-rev')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 const markdownItAttrs = require('markdown-it-attrs')
@@ -7,7 +6,6 @@ const markdownItFootnote = require('markdown-it-footnote')
 const markdownItMark = require('markdown-it-mark')
 const markdownItMultiMdTable = require('markdown-it-multimd-table')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
-const embedEverything = require('eleventy-plugin-embed-everything')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const Image = require('@11ty/eleventy-img')
 const { format } = require('date-fns')
@@ -26,7 +24,6 @@ module.exports = (config) => {
 
   config.addPassthroughCopy('src/assets')
 
-  config.addPlugin(rev)
   config.addPlugin(pluginRss)
   config.addPlugin(sass, {
     compileOptions: {
@@ -45,8 +42,6 @@ module.exports = (config) => {
   })
 
   config.addPlugin(syntaxHighlight)
-
-  config.addPlugin(embedEverything)
 
   const md = markdownIt({
     html: true,
