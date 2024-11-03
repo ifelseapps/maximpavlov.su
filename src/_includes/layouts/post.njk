@@ -15,7 +15,7 @@
             <li>
               <a class="tag-item" href="/tags/{{ tag }}/">
                 {{ tag }}
-                <span class="tag-item__count">{{ collections.tagsByFirstLetter.count[tag|lower] }}</span>
+                <span class="tag-item__count">{{ collections.tagsByFirstLetter.count[tag] }}</span>
               </a>
             </li>
           {% endif %}

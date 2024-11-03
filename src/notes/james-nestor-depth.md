@@ -3,8 +3,8 @@ title: Джеймс Нестор «Глубина»
 date: 2024-10-23
 keywords: фридайвинг, книги о фридайвинге, глубина, Джеймс Нестор Глубина
 tags:
-  - книги
-  - фридайвинг
+  - Книги
+  - Фридайвинг
 ---
 
 {% image 'https://storage.yandexcloud.net/maximpavlov.su/notes/james-nestor-depth.jpg', 'Обложка книги' %}

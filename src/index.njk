@@ -15,13 +15,13 @@ hide_h1: true
     <h2 class="main-page__title">Пишу заметки:</h2>
     <ul class="main-page-notes">
       {% for tag in tags_settings.main_page %}
-        {% if collections[tag.name | lower] | length %}
+        {% if collections[tag.name] | length %}
           <li class="main-page-notes__tag{{ " main-page-notes__tag_favorite" if tag.is_favorite }}">
             <h3 class="h h_lvl_4">
               Заметки по тегу <a href="/tags/{{ tag.name }}">&laquo;{{ tag.name | capitalize }}&raquo;</a>
             </h3>
             <ul class="main-page-notes__notes">
-              {% for note_item in collections[tag.name | lower] %}
+              {% for note_item in collections[tag.name] %}
                 <li class="main-page-notes__note">
                   <a href="{{ note_item.url }}">{{ note_item.data.title }}</a>
                 </li>
