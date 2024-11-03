@@ -1,6 +1,5 @@
 {
   "layout": "layouts/frontend.njk",
   "hide_h1": true,
-  "headerMod": "header_filled page__header_filled",
-  "topBarMod": "top-bar_landing"
+  "headerMod": "header_filled page__header_filled"
 }
