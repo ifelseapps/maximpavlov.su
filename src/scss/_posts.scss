@@ -18,11 +18,12 @@
 .post-item_favorite {
   margin: 0 -1em;
   padding: 1em;
-  border-radius: 7px;
-  background: linear-gradient(#ffee58, #ffeb3b);
+  background-color: #efebe9;
 }
 
 .post-item__title {
+  display: flex;
+  gap: 0.2em;
   font-size: 1.8rem;
   line-height: 1.3em;
 }
@@ -42,12 +43,12 @@
 }
 
 .post-detail__tags {
-  margin-top: 0.8em;
+  margin: 2.8em 0 0 !important;
 }
 
 .post-author {
   padding: 1em;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.6em;
   border-radius: 7px;
   background-color: #fffde7;
@@ -102,6 +103,10 @@
   align-self: flex-end;
 }
 
+.tags-index-item .icon-star {
+  font-size: 1em;
+}
+
 .tags-list {
   display: flex;
   flex-wrap: wrap;
@@ -114,7 +119,7 @@
 .tag-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.2em;
   padding: 0.4em 0.5em;
   border-radius: 50px;
   font-size: 0.8em;
@@ -135,6 +140,7 @@
   justify-content: center;
   width: 1.6em;
   height: 1.6em;
+  margin-left: 0.3em;
   padding: 0.4em;
   box-sizing: border-box;
   flex: none;
@@ -155,7 +161,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 0.85em;
+  font-size: 0.92em;
   @include media(lg) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -186,6 +192,8 @@
 }
 
 .main-page-notes__note {
+  display: flex;
+  gap: 0.15em;
   line-height: 1.25em;
 }
 
@@ -193,4 +201,8 @@
   margin-bottom: 3em;
   font-size: 0.99rem;
   color: #757575;
+}
+
+.video {
+  margin: 2em 0;
 }

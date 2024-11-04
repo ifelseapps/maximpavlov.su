@@ -5,24 +5,26 @@
 @import 'cv';
 @import 'prism';
 
+$imageVerticalWidth: 500px;
+
 html,
 body {
   height: 100%;
 }
 
+html {
+  font-family: 'PTSans', sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  @include media(md) {
+    font-size: 16px;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'PTSans', sans-serif;
-  font-size: 16px;
-  line-height: 1.5em;
   background-color: #fafafa;
-  @include media(md) {
-    font-size: 18px;
-  }
-  @include media(lg) {
-    font-size: 20px;
-  }
 }
 
 .visually-hidden {
@@ -127,7 +129,7 @@ h4,
 p {
   margin: 0;
   &:not([class]) {
-    margin: 1em 0;
+    margin: 0.7em 0;
     line-height: 1.4em;
     &:last-child {
       margin-bottom: 0;
@@ -143,25 +145,25 @@ ul ul {
   list-style-type: disc;
 }
 
-.image,
-.page__content img {
+.image {
   display: block;
   width: 100%;
-  max-width: 600px;
   height: auto;
-  margin: 0 auto;
+  margin: 2em 0;
 }
 
-.eleventy-plugin-youtube-embed {
-  margin: 1em 0;
+.image_vertical {
+  width: 100%;
+  max-width: $imageVerticalWidth;
+  height: auto;
 }
 
 .blockquote {
   margin: 1em 0;
   padding: 0.5em 3em 0.5em 1em;
   border-left: solid 4px #ffea00;
-  font-size: 1.4rem;
-  line-height: 1.5em;
+  font-size: 1.15rem;
+  line-height: 1.3em;
   font-style: italic;
   background-color: #fffde7;
   color: #4e342e;
@@ -178,14 +180,23 @@ ul ul {
 }
 
 .figure {
-  max-width: 600px;
-  margin: 2em auto;
+  margin: 2em 0;
+}
+
+.figure .image {
+  margin: 0;
+}
+
+.figure_vertical {
+  max-width: $imageVerticalWidth;
 }
 
 .figure__caption {
   margin-top: 0.8em;
+  padding: 0 1em;
   text-align: center;
   font-size: 0.9rem;
+  line-height: 1.3em;
   font-style: italic;
   color: #757575;
 }
@@ -232,10 +243,20 @@ mark {
 }
 
 .note {
-  margin: 1em 0;
-  padding: 1em 2em;
-  background-color: #e9f0f8;
-  color: #2969b9;
+  max-width: 700px;
+  margin: 1.5em 0;
+  padding: 1em;
+  font-size: 0.9rem;
+  line-height: 1.2em;
+  background-color: #efebe9;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  margin: 2.5em 0;
+  background-color: #757575;
+  border: none;
 }
 
 p:empty {
@@ -395,4 +416,9 @@ p:empty {
   width: 0.8em;
   height: 0.8em;
   border-radius: 100%;
+}
+
+.icon-star {
+  font-size: 0.8em;
+  color: #ff3d00;
 }

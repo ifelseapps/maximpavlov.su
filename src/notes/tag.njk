@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
 eleventyComputed:
   keywords: '{% if tags_settings.tag_page[tag.tagName] and tags_settings.tag_page[tag.tagName]["keywords"] %}{{ tags_settings.tag_page[tag.tagName]["keywords"] }}{% else %}{{ tag.tagName }}{% endif %}'
   description: '{% if tags_settings.tag_page[tag.tagName] and tags_settings.tag_page[tag.tagName]["description"] %}{{ tags_settings.tag_page[tag.tagName]["description"] }}{% endif %}'
-  title: '{{ tag.tagName }}'
+  title: '{% if tags_settings.tag_page[tag.tagName] and tags_settings.tag_page[tag.tagName]["title"] %}{{ tags_settings.tag_page[tag.tagName]["title"] }}{% else %}{{ tag.tagName }}{% endif %}'
 ---
 
 {% if tags_settings.tag_page[tag.tagName] and tags_settings.tag_page[tag.tagName]['content'] %}

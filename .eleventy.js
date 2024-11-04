@@ -108,6 +108,10 @@ module.exports = (config) => {
     return format(value || new Date(), 'dd.MM.yyyy')
   })
 
+  config.addFilter('limit', function (array, limit) {
+    return array.slice(0, limit)
+  })
+
   config.addFilter('reverse', (arr) => {
     if (!Array.isArray(arr)) {
       return arr
@@ -147,8 +151,10 @@ module.exports = (config) => {
     `
   })
 
-  config.addPairedShortcode('figure', (content, caption) => {
-    return `<figure class="figure">${content}${
+  config.addPairedShortcode('figure', (content, caption, vertical = false) => {
+    return `<figure class="figure${
+      vertical === 'true' ? ' figure_vertical' : ''
+    }">${content}${
       caption
         ? `<figcaption class="figure__caption">${caption}</figcaption>`
         : ''
@@ -157,7 +163,7 @@ module.exports = (config) => {
 
   config.addShortcode(
     'image',
-    async (src, alt, sizes = '(min-width: 30em) 50vw, 100vw') => {
+    async (src, alt, vertical = false, sizes = '100vw') => {
       const metadata = await Image(src, {
         widths: [320, 640, 960, 1200, 1800],
         formats: ['webp', 'jpeg'],
@@ -166,6 +172,9 @@ module.exports = (config) => {
       })
 
       const imageAttributes = {
+        class: ['image', vertical === 'true' ? 'image_vertical' : null]
+          .filter(Boolean)
+          .join(' '),
         alt,
         sizes,
         loading: 'lazy',
@@ -181,6 +190,13 @@ module.exports = (config) => {
     const encoded = encodeUri(title)
     return `<${tag} id=${encoded} class="h h_lvl_${level}" tabindex="-1">${title} <a class="header-anchor" href="#${encoded}">#</a></${tag}>`
   })
+
+  config.addShortcode('line', () => '<hr class="line" />')
+
+  config.addShortcode(
+    'star',
+    () => '<span class="icon-star" aria-hidden="true">★</span>',
+  )
 
   return {
     dir: {
