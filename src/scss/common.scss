@@ -131,10 +131,21 @@ p {
   &:not([class]) {
     margin: 0.7em 0;
     line-height: 1.4em;
+    &:first-child {
+      margin-top: 0;
+    }
     &:last-child {
       margin-bottom: 0;
     }
   }
+}
+
+p:empty {
+  display: none;
+}
+
+p:empty + p {
+  margin-top: 0;
 }
 
 ul:not([class]) li::marker {
@@ -257,10 +268,6 @@ mark {
   margin: 2.5em 0;
   background-color: #757575;
   border: none;
-}
-
-p:empty {
-  display: none;
 }
 
 .techs {
