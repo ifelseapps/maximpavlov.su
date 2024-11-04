@@ -9,7 +9,7 @@ permalink: "{%- if pagination.pageNumber == 0 -%}/notes/{%- else -%}/notes/{{- p
 ---
 
 {% import "_posts.njk" as posts %}
-{{ posts.list(items, collections.tagsByFirstLetter.count) }}
+{{ posts.list(items) }}
 
 {% if pagination.href.previous or pagination.href.next %}
   <div class="pagination">

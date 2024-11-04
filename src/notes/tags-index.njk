@@ -11,14 +11,12 @@ eleventyExcludeFromCollections: true
       <h2 class="h h_lvl_3 tags-index-item__letter">{{ letter | upper }}</h2>
       <ul class="tags-list tags-index-item__tags">
         {% for tag in collections.tagsByFirstLetter.groups[letter] %}
-          <li>
-            <a class="tag-item" href="/tags/{{ tag.name }}/">
-              {% if tags_settings.tags_index[tag.name] and tags_settings.tags_index[tag.name]['is_favorite'] %}
-                {% star %}
-              {% endif %}
-              {{ tag.name }}
-              <span class="tag-item__count">{{ tag.count }}</span>
-            </a>
+          <li class="tag-item">
+            {% if tags_settings.tags_index[tag.name] and tags_settings.tags_index[tag.name]['is_favorite'] %}
+              {% star %}
+            {% endif %}
+            <a href="/tags/{{ tag.name }}/">{{ tag.name }}</a>
+            <sup class="tag-item__count">{{ tag.count }}</sup>
           </li>
         {% endfor %}
       </ul>
