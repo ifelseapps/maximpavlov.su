@@ -206,6 +206,6 @@
 .video {
   max-width: 100%;
   height: auto;
-  min-height: 480px;
+  aspect-ratio: 16 / 9;
   margin: 2em 0;
 }
