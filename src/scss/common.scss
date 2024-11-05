@@ -53,9 +53,6 @@ a {
   &[href^='http'],
   &[href^='https'] {
     &:not(.button) {
-      transition:
-        background-color 0.3s,
-        text-decoration-color 0.3s;
       &::before {
         position: relative;
         display: inline-block;
@@ -65,11 +62,6 @@ a {
         content: url(/assets/images/external.svg);
         width: 1em;
         height: 1em;
-      }
-      &:hover {
-        color: #2962ff;
-        background-color: #ffecb3;
-        text-decoration-color: transparent;
       }
     }
   }
