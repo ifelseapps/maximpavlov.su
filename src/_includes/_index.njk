@@ -1,0 +1,23 @@
+{% macro notes(items, collections) %}
+  <ul class="main-page-notes__column">
+    {% for tag in items %}
+      {% if collections[tag.name] | length %}
+        <li class="main-page-notes__tag{{ " main-page-notes__tag_favorite" if tag.is_favorite }}">
+          <h3 class="h h_lvl_4">
+            Заметки по тегу <a href="/tags/{{ tag.name }}">&laquo;{{ tag.name }}&raquo;</a>
+          </h3>
+          <ul class="main-page-notes__notes">
+            {% for note_item in collections[tag.name] | reverse | limit(5) %}
+              <li class="main-page-notes__note">
+                {% if note_item.data.is_favorite %}
+                  {% star %}
+                {% endif %}
+                <a href="{{ note_item.url }}">{{ note_item.data.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endmacro %}

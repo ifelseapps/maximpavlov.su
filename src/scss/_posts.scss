@@ -139,14 +139,23 @@
   }
 }
 
-.main-page-notes__tag {
+.main-page-notes__column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
   flex: none;
-  margin: 0 -0.5em;
-  padding: 0.5em;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   @include media(lg) {
     width: calc(50% - 0.75em);
   }
+}
+
+.main-page-notes__tag {
+  margin: 0 -0.5em;
+  padding: 0.5em;
+  box-sizing: border-box;
 }
 
 .main-page-notes__tag_favorite {

@@ -11,6 +11,8 @@ const { format } = require('date-fns')
 const encodeUri = require('strict-uri-encode')
 const layeringCollection = require('./src/11ty/collections/tagsWithPagination')
 
+const isEven = (n) => n % 2 === 0
+
 /** @param {import("@11ty/eleventy").UserConfig} config */
 module.exports = (config) => {
   const data = {
@@ -117,6 +119,17 @@ module.exports = (config) => {
       return arr
     }
     return [...arr].reverse()
+  })
+
+  config.addFilter('columns', (array) => {
+    const left = []
+    const right = []
+    array.forEach((item, index) => {
+      const column = isEven(index + 1) ? right : left
+      column.push(item)
+    })
+
+    return { left, right }
   })
 
   config.addFilter('dateToRfc3339', pluginRss.dateToRfc3339)
